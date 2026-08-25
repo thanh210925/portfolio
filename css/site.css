@@ -1,0 +1,1064 @@
+/* ==========================================================================
+   BĂNG THANH PORTFOLIO - DESIGN SYSTEM & CUSTOM STYLES
+   Tông màu cam rực rỡ, đường gợn sóng SVG, thẻ Glassmorphism & Animations
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+    --primary-orange: #FA7D2B;
+    --primary-orange-light: #FF9E4A;
+    --primary-orange-dark: #E06010;
+    --orange-gradient: linear-gradient(135deg, #F87C28 0%, #FA9D4D 50%, #FFA858 100%);
+    --bg-warm-cream: #FFF7F2;
+    --bg-white: #FFFFFF;
+    --text-dark: #1E1E1E;
+    --text-muted: #555555;
+    --card-shadow: 0 12px 30px rgba(250, 125, 43, 0.1);
+    --card-shadow-hover: 0 20px 45px rgba(250, 125, 43, 0.2);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+    font-size: 16px;
+}
+
+#hero,
+#skills,
+#timeline,
+#projects,
+#activities,
+.footer-section {
+    scroll-margin-top: 95px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-warm-cream);
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
+   FLOATING NAVBAR / HEADER BAR (GIỐNG MẪU YÊU CẦU)
+   -------------------------------------------------------------------------- */
+.floating-header-container {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    padding: 0 1.5rem;
+    pointer-events: none;
+}
+
+.floating-navbar {
+    pointer-events: auto;
+    max-width: 1320px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    transition: var(--transition-smooth);
+}
+
+.custom-nav-link {
+    color: #2D3748 !important;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.5rem 0.85rem !important;
+    transition: var(--transition-smooth);
+    border-radius: 20px;
+}
+
+.custom-nav-link:hover,
+.custom-nav-link.active {
+    color: var(--primary-orange-dark) !important;
+    background: rgba(250, 125, 43, 0.08);
+}
+
+.nav-social-icon {
+    color: #2D3748;
+    font-size: 1.2rem;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-social-icon:hover {
+    color: var(--primary-orange);
+    transform: translateY(-2px);
+}
+
+.btn-download-cv {
+    background: var(--primary-orange);
+    color: #FFFFFF !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.55rem 1.35rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(250, 125, 43, 0.3);
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.btn-download-cv:hover {
+    background: var(--primary-orange-dark);
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(250, 125, 43, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   LANGUAGE TOGGLE BUTTON (NÚT CHUYỂN ĐỔI NGÔN NGỮ VI / EN)
+   -------------------------------------------------------------------------- */
+.lang-toggle-btn {
+    background: rgba(250, 125, 43, 0.08);
+    border: 1px solid rgba(250, 125, 43, 0.25);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: var(--transition-smooth);
+    outline: none;
+}
+
+.lang-toggle-btn:hover {
+    background: rgba(250, 125, 43, 0.18);
+    border-color: var(--primary-orange);
+    box-shadow: 0 4px 14px rgba(250, 125, 43, 0.25);
+    transform: translateY(-1px);
+}
+
+.lang-toggle-btn .lang-code {
+    color: #718096;
+    transition: color 0.3s ease;
+}
+
+.lang-toggle-btn .lang-code.active {
+    color: var(--primary-orange-dark);
+    font-weight: 800;
+}
+
+.lang-toggle-btn .lang-divider {
+    margin: 0 3px;
+    color: #CBD5E0;
+}
+
+/* --------------------------------------------------------------------------
+   HERO BANNER & WAVY BACKGROUND
+   -------------------------------------------------------------------------- */
+.hero-wrapper {
+    position: relative;
+    background: var(--orange-gradient);
+    border-radius: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+/* Họa tiết Dot Matrix */
+.dot-matrix {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.35) 2px, transparent 2px);
+    background-size: 14px 14px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dot-matrix-top-right {
+    top: 30px;
+    right: 40px;
+}
+
+.dot-matrix-bottom-left {
+    bottom: 80px;
+    left: 30px;
+}
+
+/* Background Wavy Layer lượn phía sau ảnh chân dung */
+.hero-bg-waves {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.18;
+}
+
+.hero-bg-waves svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nổi bật thông tin Hero */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding-top: 6.5rem;
+}
+
+/* Hero Status Badge & Pulse Animation */
+.hero-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.45rem 1.15rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pulse-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #22C55E;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Floating Tech Chips bay quanh ảnh chân dung */
+.floating-tech-tag {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    color: #1A1A1A;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    z-index: 4;
+    pointer-events: none;
+    animation: floatAnim 4s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tag-csharp { top: 12%; left: 0px; animation-delay: 0s; }
+.tag-ai { top: 52%; right: -10px; animation-delay: 1.5s; }
+.tag-web { bottom: 12%; left: 20px; animation-delay: 0.8s; }
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.signature-text {
+    font-family: 'Great Vibes', 'Kalam', cursive;
+    font-size: clamp(3.8rem, 7.5vw, 8rem);
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    letter-spacing: -1px;
+    white-space: nowrap;
+    animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 400;
+    max-width: 620px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+    margin-bottom: 2.25rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Nút Call-To-Action "Xem dự án của tôi →" */
+.btn-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #FFFFFF;
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 0.9rem 2.25rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.btn-hero-cta i.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-hero-cta:hover {
+    background: #FFFFFF;
+    color: var(--primary-orange-dark);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hero-cta:hover i.arrow-icon {
+    transform: translateX(6px);
+}
+
+/* Ảnh chân dung Băng Thanh - Phóng to nổi bật */
+.portrait-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.portrait-img {
+    max-height: 82vh;
+    width: 100%;
+    max-width: 540px;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
+    transform: scale(1.18);
+    transform-origin: bottom center;
+    transition: transform 0.5s ease;
+}
+
+.portrait-container:hover .portrait-img {
+    transform: scale(1.22) translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   WAVE DIVIDERS (ĐƯỜNG GỢN SÓNG PHÂN CHIA SECTION)
+   -------------------------------------------------------------------------- */
+.wave-divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    margin-top: 1.5rem;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+    margin-bottom: -1px;
+}
+
+.wave-hero-bottom svg {
+    fill: var(--bg-warm-cream);
+}
+
+.wave-footer-top svg {
+    fill: var(--primary-orange);
+}
+
+.timeline-wrapper {
+    position: relative;
+    background: var(--orange-gradient);
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION KỸ NĂNG CỐT LÕI (SKILL CARDS)
+   -------------------------------------------------------------------------- */
+.skills-section {
+    padding: 3.5rem 0 5.5rem 0;
+    position: relative;
+    background-color: var(--bg-warm-cream);
+}
+
+.section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: rgba(17, 17, 17, 0.85);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+}
+
+/* Thẻ Skill Glassmorphism */
+.skill-card {
+    background: #FFFFFF;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(250, 125, 43, 0.08);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(250, 125, 43, 0.25);
+}
+
+/* Icon tròn cam */
+.skill-icon-circle {
+    width: 76px;
+    height: 76px;
+    background: var(--orange-gradient);
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(250, 125, 43, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.skill-card:hover .skill-icon-circle {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.skill-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+    color: #111;
+    margin-bottom: 0.9rem;
+}
+
+.skill-card-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.65rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.skill-check-icon {
+    width: 22px;
+    height: 22px;
+    background: rgba(250, 125, 43, 0.12);
+    color: var(--primary-orange);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION TIMELINE (HỌC VẤN & HÀNH TRÌNH) - ULTRA PREMIUM STYLING
+   -------------------------------------------------------------------------- */
+.timeline-section-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1.1rem;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Đường trục đứng chính giữa có ánh sáng phát quang */
+.timeline-main-line {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.95) 70%, rgba(255, 255, 255, 0.2) 100%);
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1.25rem 2.75rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.timeline-left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-right {
+    left: 50%;
+    text-align: left;
+}
+
+/* Node tròn trung tâm với hiệu ứng viền phát sáng & Inner core */
+.timeline-node {
+    position: absolute;
+    top: 2.2rem;
+    width: 28px;
+    height: 28px;
+    background: #FFFFFF;
+    border: 4px solid var(--primary-orange);
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8), 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.node-inner {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-orange-dark);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.timeline-left .timeline-node {
+    right: -14px;
+}
+
+.timeline-right .timeline-node {
+    left: -14px;
+}
+
+.timeline-item:hover .timeline-node {
+    background: var(--primary-orange);
+    border-color: #FFFFFF;
+    transform: scale(1.35);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.timeline-item:hover .node-inner {
+    background: #FFFFFF;
+    transform: scale(1.2);
+}
+
+/* Thẻ Glassmorphism cao cấp */
+.timeline-content {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    border-radius: 1.5rem;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+    background: #FFFFFF;
+    border-color: rgba(250, 125, 43, 0.3);
+}
+
+/* Cụm năm & Đường nối */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-left .timeline-header {
+    justify-content: flex-end;
+}
+
+.timeline-right .timeline-header {
+    justify-content: flex-start;
+}
+
+.timeline-year {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1A1A1A 0%, #4A4A4A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.timeline-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer thẻ chứa Badges & Tags */
+.timeline-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.timeline-left .timeline-footer {
+    justify-content: flex-end;
+}
+
+.timeline-right .timeline-footer {
+    justify-content: flex-start;
+}
+
+.timeline-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+}
+
+.badge-active {
+    background: rgba(250, 125, 43, 0.12);
+    color: var(--primary-orange-dark);
+}
+
+.badge-highlight {
+    background: rgba(13, 110, 253, 0.1);
+    color: #0D6EFD;
+}
+
+.badge-completed {
+    background: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.timeline-tag {
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: #F1F3F5;
+    color: #495057;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 767.98px) {
+    .timeline-main-line {
+        left: 22px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-left .timeline-node,
+    .timeline-right .timeline-node {
+        left: 8px;
+        right: auto;
+    }
+
+    .timeline-left .timeline-header {
+        justify-content: flex-start;
+    }
+
+    .timeline-left .timeline-header .timeline-connector-line {
+        order: 2;
+    }
+
+    .timeline-left .timeline-header .timeline-year {
+        order: 1;
+    }
+
+    .timeline-left .timeline-footer {
+        justify-content: flex-start;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION PROJECTS (CINEZONE) - MAC BROWSER MOCKUP & TECH CHIPS
+   -------------------------------------------------------------------------- */
+.projects-section {
+    padding: 2.5rem 0 1.5rem 0;
+}
+
+.projects-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #111;
+    margin-bottom: 1.75rem;
+}
+
+.project-card-wrapper {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFDFB 100%);
+    border-radius: 2rem;
+    padding: 2.25rem;
+    box-shadow: 0 15px 40px rgba(250, 125, 43, 0.08);
+    border: 1px solid rgba(250, 125, 43, 0.15);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.project-card-wrapper:hover {
+    box-shadow: 0 25px 50px rgba(250, 125, 43, 0.18);
+    border-color: rgba(250, 125, 43, 0.35);
+    transform: translateY(-4px);
+}
+
+.browser-window-frame {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.browser-window-frame:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(250, 125, 43, 0.2);
+}
+
+.window-bar {
+    background: #F1F3F5;
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.window-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot-red { width: 10px; height: 10px; background: #FF5F56; border-radius: 50%; }
+.dot-yellow { width: 10px; height: 10px; background: #FFBD2E; border-radius: 50%; }
+.dot-green { width: 10px; height: 10px; background: #27C93F; border-radius: 50%; }
+
+.window-url-badge {
+    background: #FFFFFF;
+    color: #495057;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.2rem 0.85rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Tech Chips Inside Projects */
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.chip-orange { background: rgba(250, 125, 43, 0.12); color: var(--primary-orange-dark); }
+.chip-blue { background: rgba(13, 110, 253, 0.1); color: #0D6EFD; }
+.chip-green { background: rgba(25, 135, 84, 0.1); color: #198754; }
+.chip-purple { background: rgba(111, 66, 193, 0.1); color: #6F42C1; }
+
+.tech-chip:hover {
+    transform: translateY(-2px);
+}
+
+/* Accordion tùy chỉnh */
+.custom-accordion .accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 0.85rem !important;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+    transition: var(--transition-smooth);
+}
+
+.custom-accordion .accordion-button {
+    font-weight: 600;
+    background-color: #FDFDFD;
+    color: #222;
+    box-shadow: none !important;
+    padding: 1rem 1.25rem;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(250, 125, 43, 0.08);
+    color: var(--primary-orange-dark);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION HOẠT ĐỘNG (ACTIVITIES) - POLAROID OFFSET PHOTO CARDS
+   -------------------------------------------------------------------------- */
+.activities-section {
+    padding: 1.5rem 0 4rem 0;
+    position: relative;
+}
+
+.activity-section-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(250, 125, 43, 0.12);
+    color: var(--primary-orange-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 1.1rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(250, 125, 43, 0.25);
+    margin-bottom: 0.75rem;
+}
+
+.activity-card-wrapper {
+    background: #FFFFFF;
+    border-radius: 2rem;
+    padding: 2.25rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(250, 125, 43, 0.12);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.activity-card-wrapper:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(250, 125, 43, 0.3);
+    transform: translateY(-4px);
+}
+
+.polaroid-photo-frame {
+    position: relative;
+    background: #FFFFFF;
+    padding: 10px 10px 18px 10px;
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transform: rotate(-2deg);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activity-card-wrapper:nth-child(even) .polaroid-photo-frame {
+    transform: rotate(2deg);
+}
+
+.activity-card-wrapper:hover .polaroid-photo-frame {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(250, 125, 43, 0.22);
+}
+
+.photo-pin-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    background: #FFFFFF;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.activity-role-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(250, 125, 43, 0.1);
+    color: var(--primary-orange-dark);
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 0.38rem 0.95rem;
+    border-radius: 50px;
+    border: 1px solid rgba(250, 125, 43, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER & SCROLL TO TOP
+   -------------------------------------------------------------------------- */
+.footer-section {
+    background: var(--orange-gradient);
+    color: #FFFFFF;
+    padding: 3.5rem 0 2rem 0;
+    position: relative;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #FFFFFF;
+}
+
+/* Nút Scroll to Top tròn nổi */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 52px;
+    height: 52px;
+    background: var(--primary-orange);
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 8px 25px rgba(250, 125, 43, 0.4);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition-smooth);
+    z-index: 999;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background: #FFFFFF;
+    color: var(--primary-orange);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   ANIMATIONS
+   -------------------------------------------------------------------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .hero-content {
+        padding-top: 5.5rem;
+    }
+    .signature-text {
+        font-size: 5.5rem;
+        text-align: center;
+    }
+    .intro-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-cta-wrapper {
+        text-align: center;
+    }
+    .portrait-img {
+        max-height: 55vh;
+        margin-top: 2rem;
+    }
+}

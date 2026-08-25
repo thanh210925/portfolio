@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Băng Thanh - Software Engineer Portfolio</title>
+
+    <!-- Nhúng Fonts từ Google Fonts và Bootstrap Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap CSS (Nếu bạn dùng CDN, hãy thêm dòng này hoặc giữ file CSS local) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+    <!-- ==========================================================================
+       TOP NAV / HEADER BAR (FLOATING NAVBAR CỐ ĐỊNH TRÊN ĐỈNH)
+       ========================================================================== -->
+    <div class="floating-header-container">
+        <nav class="navbar navbar-expand-lg floating-navbar">
+            <div class="container-fluid px-2 px-lg-3">
+                
+                <!-- Mobile Menu Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#floatingNavbarNav" aria-controls="floatingNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-2 text-dark"></i>
+                </button>
+
+                <!-- Nav Links & Right Items Collapse -->
+                <div class="collapse navbar-collapse justify-content-between" id="floatingNavbarNav">
+                    
+                    <!-- Nav Links Left -->
+                    <ul class="navbar-nav align-items-center gap-lg-2 me-auto mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link active" href="#hero" data-i18n="nav_home">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link" href="#hero" data-i18n="nav_about">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link" href="#skills" data-i18n="nav_skills">Kỹ năng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link" href="#timeline" data-i18n="nav_timeline">Hành trình</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link" href="#projects" data-i18n="nav_projects">Dự án</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link" href="#activities" data-i18n="nav_activities">Hoạt động</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-link" href="#footer" data-i18n="nav_contact">Liên hệ</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side: Language Toggle, Social Icons & Download CV Button -->
+                    <div class="d-flex align-items-center gap-2 gap-lg-3">
+                        <!-- Nút chuyển ngôn ngữ VI / EN -->
+                        <button id="langToggleBtn" class="lang-toggle-btn" title="Chuyển đổi ngôn ngữ / Switch language">
+                            <i class="bi bi-globe me-1"></i>
+                            <span class="lang-code lang-vi active">VIE</span>
+                            <span class="lang-divider">/</span>
+                            <span class="lang-code lang-en">ENG</span>
+                        </button>
+
+                        <div class="header-social-icons d-flex gap-3 align-items-center me-1">
+                            <a href="https://github.com/bangthanhnguyenit-web" target="_blank" class="nav-social-icon" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="#" target="_blank" class="nav-social-icon" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="mailto:bangthanh.nguyen.it@gmail.com" class="nav-social-icon" title="Email">
+                                <i class="bi bi-envelope-fill"></i>
+                            </a>
+                        </div>
+
+                        <a href="#" class="btn-download-cv" data-i18n="nav_download_cv">
+                            Tải CV <i class="bi bi-download ms-1"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ==========================================================================
+       HERO BANNER & MAIN CONTENT
+       ========================================================================== -->
+    <div id="hero" class="hero-wrapper">
+
+        <!-- Họa tiết Dot Matrix ở các góc -->
+        <div class="dot-matrix dot-matrix-top-right"></div>
+        <div class="dot-matrix dot-matrix-bottom-left"></div>
+
+        <!-- Họa tiết SVG Wave nền phía sau Hero -->
+        <div class="hero-bg-waves">
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.3" d="M-100 200C200 300 400 100 700 250C1000 400 1200 150 1500 300V600H-100V200Z" fill="white" />
+                <path opacity="0.2" d="M-100 350C150 450 500 250 850 400C1200 550 1350 350 1600 450V600H-100V350Z" fill="white" />
+            </svg>
+        </div>
+
+        <!-- HERO MAIN CONTENT -->
+        <div class="container hero-content px-4">
+            <div class="row align-items-center min-vh-60">
+
+                <!-- Cột trái: Tên & Đoạn văn giới thiệu & CTA -->
+                <div class="col-lg-6 col-xl-6 text-start mb-5 mb-lg-0">
+                    <div class="hero-status-pill mb-3">
+                        <span class="pulse-dot"></span> <span data-i18n="hero_status">Software Engineer Portfolio</span>
+                    </div>
+                    <h1 class="signature-text">Băng Thanh</h1>
+                    <p class="intro-text" data-i18n="hero_intro">
+                        Xin chào, mình là Băng Thanh— sinh viên tại HUFLIT và là một người mang niềm đam mê mãnh liệt với lập trình web. Mục tiêu của mình là thiết kế và xây dựng nên những chiếc web thật ấn tượng, không chỉ mượt mà ở giao diện mà còn phải mạnh mẽ từ sâu bên trong.
+                    </p>
+                    <div class="hero-cta-wrapper">
+                        <a href="#projects" class="btn-hero-cta text-decoration-none" data-i18n="hero_cta">
+                            <i class="bi bi-folder-fill me-1"></i> Xem dự án của tôi <i class="bi bi-arrow-right arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Ảnh chân dung + Floating Tech Tags -->
+                <div class="col-lg-6 col-xl-6 portrait-container">
+                    <span class="floating-tech-tag tag-csharp"><i class="bi bi-code-slash text-warning"></i> C# .NET 8.0</span>
+                    <span class="floating-tech-tag tag-ai"><i class="bi bi-cpu text-primary"></i> AI Integration</span>
+                    <span class="floating-tech-tag tag-web"><i class="bi bi-layers text-success"></i> ASP.NET MVC</span>
+                    <img src="img/image-Photoroom.png" alt="Băng Thanh Portrait" class="portrait-img" />
+                </div>
+            </div>
+        </div>
+
+        <!-- WAVE DIVIDER (HERO -> SKILLS: Lượn sóng từ nền cam sang nền sáng) -->
+        <div class="wave-divider wave-hero-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 45C240 85 480 95 720 55C960 15 1200 25 1440 45V120H0V45Z" fill="#FFF7F2" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION KỸ NĂNG CỐT LÕI (SKILLS) - ĐƯỢC TÁCH RIÊNG TRÊN NỀN KÍNH
+       ========================================================================== -->
+    <section id="skills" class="skills-section">
+        <div class="container px-4 position-relative" style="z-index: 3;">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title" data-i18n="skills_title">Kỹ Năng Cốt Lõi</h2>
+                <p class="section-subtitle" data-i18n="skills_subtitle">Bộ công cụ giúp mình xây dựng các hệ thống web tối ưu</p>
+            </div>
+
+            <!-- Lưới 3 Thẻ Kỹ Năng -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Thẻ 1: Backend & Server -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon-circle">
+                            <i class="bi bi-hdd-network"></i>
+                        </div>
+                        <h3 class="skill-card-title" data-i18n="skill1_title">Backend & Server</h3>
+                        <p class="skill-card-desc" data-i18n="skill1_desc">
+                            Tư duy logic hệ thống chặt chẽ, áp dụng kiến trúc MVC để xử lý luồng dữ liệu an toàn.
+                        </p>
+                        <div class="skill-list mx-auto" style="max-width: 220px;">
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>C# & .NET 8.0</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>ASP.NET Core MVC</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>RESTful API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thẻ 2: Giao Diện (UI) -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon-circle">
+                            <i class="bi bi-window-sidebar"></i>
+                        </div>
+                        <h3 class="skill-card-title" data-i18n="skill2_title">Giao Diện (UI)</h3>
+                        <p class="skill-card-desc" data-i18n="skill2_desc">
+                            Xây dựng giao diện responsive, mượt mà và thân thiện với trải nghiệm người dùng.
+                        </p>
+                        <div class="skill-list mx-auto" style="max-width: 220px;">
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>HTML5 / CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>Bootstrap 5</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>JavaScript (Basic)</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>Figma / Canva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thẻ 3: Công Cụ & Khác -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon-circle">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h3 class="skill-card-title" data-i18n="skill3_title">Công Cụ & Khác</h3>
+                        <p class="skill-card-desc" data-i18n="skill3_desc">
+                            Khả năng đọc hiểu tài liệu chuyên ngành tốt và quản lý mã nguồn linh hoạt.
+                        </p>
+                        <div class="skill-list mx-auto" style="max-width: 220px;">
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>Git / GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>Visual Studio</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span data-i18n="skill_eng">Tiếng Anh (TOEIC)</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION HỌC VẤN & HÀNH TRÌNH (TIMELINE)
+       ========================================================================== -->
+    <div class="timeline-wrapper">
+        <!-- WAVE DIVIDER (SKILLS -> TIMELINE: Lượn sóng chuyển tiếp sang nền cam) -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0C360 75 720 20 1080 65C1260 85 1380 50 1440 40V120H0V0Z" fill="#F87C28" />
+            </svg>
+        </div>
+
+        <div id="timeline" class="container px-4 py-5 position-relative" style="z-index: 3;">
+            <div class="text-center mb-5 reveal">
+                <span class="timeline-section-badge" data-i18n="timeline_badge"><i class="bi bi-journal-bookmark-fill me-1"></i> Kinh Nghiệm & Hoạt Động</span>
+                <h2 class="section-title text-white mt-2" data-i18n="timeline_title">Kinh Nghiệm & Hoạt Động</h2>
+                <p class="section-subtitle text-white-50" data-i18n="timeline_subtitle">Hành trình tích lũy kinh nghiệm thực chiến, kiến thức học vấn và các hoạt động nổi bật</p>
+            </div>
+
+            <div class="timeline-container reveal">
+                <!-- Đường trục đứng chính giữa -->
+                <div class="timeline-main-line"></div>
+
+                <!-- Cột mốc 1 (Bên trái) -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-node">
+                        <div class="node-inner"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4 class="timeline-year" data-i18n="timeline1_year">2023 - 2027</h4>
+                        </div>
+                        <h5 class="timeline-title" data-i18n="timeline1_school">Trường Đại học Ngoại Ngữ Tin học TPHCM (HUFLIT)</h5>
+                        <p class="timeline-desc" data-i18n="timeline1_major">Chuyên ngành: <strong>Công Nghệ Phần Mềm</strong></p>
+                        
+                        <div class="timeline-footer">
+                            <span class="timeline-badge badge-active" data-i18n="timeline1_status"><i class="bi bi-mortarboard-fill me-1"></i> Đang theo học</span>
+                            <span class="timeline-tag">Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột mốc 2 (Bên phải) -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-node">
+                        <div class="node-inner"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4 class="timeline-year" data-i18n="timeline2_year">2024 - Hiện tại</h4>
+                        </div>
+                        <h5 class="timeline-title" data-i18n="timeline2_title">Phát Triển Dự Án Thực Tế & AI</h5>
+                        <p class="timeline-desc" data-i18n="timeline2_desc">Thực hiện dự án <strong>CineZone</strong> tích hợp C# .NET 8.0, Machine Learning & Gemini AI API</p>
+                        <div class="timeline-footer">
+                            <span class="timeline-badge badge-highlight" data-i18n="timeline2_badge"><i class="bi bi-code-slash me-1"></i> Thực hành chuyên sâu</span>
+                            <span class="timeline-tag">AI Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột mốc 3 (Bên trái) -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-node">
+                        <div class="node-inner"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4 class="timeline-year" data-i18n="timeline3_year">2023 - 2024</h4>
+                        </div>
+                        <h5 class="timeline-title" data-i18n="timeline3_title">Xây Dựng Nền Tảng Công Nghệ</h5>
+                        <p class="timeline-desc" data-i18n="timeline3_desc">Thành thạo lập trình C#, Cấu trúc dữ liệu & Giải thuật, SQL Server & Web Front-end</p>
+                        <div class="timeline-footer">
+                            <span class="timeline-badge badge-completed" data-i18n="timeline3_badge"><i class="bi bi-check-circle-fill me-1"></i> Hoàn thành nền tảng</span>
+                            <span class="timeline-tag">Core Fundamentals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WAVE DIVIDER (TIMELINE -> PROJECTS: Lượn sóng sang phần Projects) -->
+        <div class="wave-divider wave-hero-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 35C240 70 480 90 720 60C960 30 1200 10 1440 35V120H0V35Z" fill="#FFF7F2" />
+            </svg>
+        </div>
+
+    </div>
+
+    <!-- ==========================================================================
+       SECTION PROJECTS (CINEZONE)
+       ========================================================================== -->
+    <section id="projects" class="projects-section container-fluid px-4">
+        <div class="container">
+
+            <!-- Tiêu đề "Projects" -->
+            <div class="mb-4 reveal">
+                <h2 class="projects-title" data-i18n="projects_main_title">Projects</h2>
+            </div>
+
+            <!-- Khung dự án chính -->
+            <div class="project-card-wrapper reveal">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Lưới hình ảnh CineZone nghệ thuật dạng Mac Window Browser Mockup -->
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+
+                            <!-- Ảnh chính lớn (Trang chủ CineZone) trong khung Mac Window -->
+                            <div class="col-md-6">
+                                <div class="browser-window-frame h-100">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                        <span class="window-url-badge ms-auto me-auto"><i class="bi bi-lock-fill text-success me-1"></i> cinezone.app</span>
+                                    </div>
+                                    <div class="p-2">
+                                        <img src="img/cinezone-home.png" alt="CineZone Home" class="w-100 rounded-3 object-fit-cover" style="height: 335px;" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 Ảnh phụ xếp chồng trong khung Mac Window -->
+                            <div class="col-md-6 d-flex flex-column gap-3">
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/cinezone-theater.png" alt="CineZone Theaters" class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/cinezone-admin.png" alt="CineZone Admin" class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Nội dung mô tả & Accordion chi tiết -->
+                    <div class="col-lg-6">
+                        <div class="p-2 p-lg-3">
+
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="tech-chip chip-orange"><i class="bi bi-code-slash"></i> C# .NET 8.0</span>
+                                <span class="tech-chip chip-blue"><i class="bi bi-cpu"></i> Gemini AI</span>
+                                <span class="tech-chip chip-green"><i class="bi bi-lightning-charge"></i> SignalR</span>
+                                <span class="tech-chip chip-purple"><i class="bi bi-shield-check"></i> JWT / RBAC</span>
+                            </div>
+
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.85rem;" data-i18n="proj1_title">
+                                CINEZONE - Hệ Thống Quản Lý & Đặt Vé Xem Phim
+                            </h3>
+                            <p class="text-muted mb-4 fs-6" data-i18n="proj1_desc">
+                                Nền tảng web toàn diện số hóa quy trình vận hành giữa khách hàng và bộ phận quản lý rạp chiếu phim, giải quyết bài toán đặt chỗ thời gian thực và tự động hóa doanh nghiệp.
+                            </p>
+
+                            <!-- Accordion Chi Tiết Tính Năng -->
+                            <div class="accordion custom-accordion mb-4" id="projectAccordion">
+
+                                <!-- Mục 1: Backend -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" data-i18n="proj1_acc1_head">
+                                            <i class="bi bi-hdd-network text-warning me-2 fs-5"></i> Kiến trúc & Vận hành Backend
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj1_acc1_body">
+                                            <p class="mb-2">• Phát triển trên nền tảng C# / .NET 8.0 MVC kết hợp với Entity Framework Core và SQL Server.</p>
+                                            <p class="mb-2">• Ứng dụng SignalR để đồng bộ hóa dữ liệu thời gian thực cho tính năng chọn ghế và chat hỗ trợ.</p>
+                                            <p class="mb-0">• Thiết lập hệ thống bảo mật đa lớp (JWT, Cookie, BCrypt) và phân quyền hạt nhân (RBAC) chi tiết.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mục 2: AI & ML -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-i18n="proj1_acc2_head">
+                                            <i class="bi bi-cpu text-primary me-2 fs-5"></i> Tích hợp AI & Machine Learning
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#projectAccordion">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj1_acc2_body">
+                                            <p class="mb-2">• Face AI: Tích hợp nhận diện khuôn mặt tự động chấm công và đăng ký nhân viên.</p>
+                                            <p class="mb-2">• Recommendation Engine: Sử dụng thuật toán K-Means & KNN gợi ý phim theo hành vi.</p>
+                                            <p class="mb-2">• Apriori Algorithm: Khai phá quy luật để gợi ý combo bắp nước tối ưu.</p>
+                                            <p class="mb-0">• Trợ lý ảo AI: Tích hợp Google Gemini API làm chatbot tư vấn lịch chiếu 24/7.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mục 3: Thanh toán & Quản trị -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-i18n="proj1_acc3_head">
+                                            <i class="bi bi-credit-card text-success me-2 fs-5"></i> Thanh toán & Tính năng Quản trị
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#projectAccordion">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj1_acc3_body">
+                                            <p class="mb-2">• Tích hợp cổng thanh toán trực tuyến VNPay và Stripe với cơ chế giữ/hủy chỗ thông minh.</p>
+                                            <p class="mb-2">• Quản lý lịch chiếu chống xung đột, phòng chiếu, mã giảm giá (Voucher Condition Engine).</p>
+                                            <p class="mb-0">• Tính lương nhân viên tự động dựa trên bảng công tháng và xuất vé điện tử kèm mã QR Code.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Footer Card Dự Án -->
+                            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="fw-bold text-dark small" data-i18n="proj1_role">Vai trò: Phát triển Backend & AI Integration</span>
+                                <a href="https://github.com/bangthanhnguyenit-web/cinezone" target="_blank" class="btn btn-dark rounded-pill px-4 btn-sm text-decoration-none">
+                                    <i class="bi bi-github me-2"></i> GitHub
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Khung dự án 2 (Bố cục ngược: Mô tả bên trái, Ảnh bên phải) -->
+            <div class="project-card-wrapper reveal mt-5">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Nội dung mô tả & Accordion chi tiết -->
+                    <div class="col-lg-6">
+                        <div class="p-2 p-lg-3">
+
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="tech-chip chip-orange"><i class="bi bi-code-slash"></i> ASP.NET Core</span>
+                                <span class="tech-chip chip-blue"><i class="bi bi-database"></i> SQL Server</span>
+                                <span class="tech-chip chip-green"><i class="bi bi-bootstrap"></i> Bootstrap 5</span>
+                            </div>
+
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.85rem;" data-i18n="proj2_title">
+                                LOREM IPSUM - Tên Dự Án Mới
+                            </h3>
+                            <p class="text-muted mb-4 fs-6" data-i18n="proj2_desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+
+                            <!-- Accordion Chi Tiết Tính Năng -->
+                            <div class="accordion custom-accordion mb-4" id="projectAccordion2">
+
+                                <!-- Mục 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingProj2One">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProj2One" aria-expanded="false" aria-controls="collapseProj2One" data-i18n="proj2_acc1_head">
+                                            <i class="bi bi-layers-half text-warning me-2 fs-5"></i> Lorem Ipsum Tính Năng 1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseProj2One" class="accordion-collapse collapse" aria-labelledby="headingProj2One" data-bs-parent="#projectAccordion2">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj2_acc1_body">
+                                            <p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit lacus nec metus.</p>
+                                            <p class="mb-2">• Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula.</p>
+                                            <p class="mb-0">• Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mục 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingProj2Two">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProj2Two" aria-expanded="false" aria-controls="collapseProj2Two" data-i18n="proj2_acc2_head">
+                                            <i class="bi bi-gear-wide-connected text-primary me-2 fs-5"></i> Lorem Ipsum Tính Năng 2
+                                        </button>
+                                    </h2>
+                                    <div id="collapseProj2Two" class="accordion-collapse collapse" aria-labelledby="headingProj2Two" data-bs-parent="#projectAccordion2">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj2_acc2_body">
+                                            <p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum.</p>
+                                            <p class="mb-2">• Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</p>
+                                            <p class="mb-0">• Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mục 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingProj2Three">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProj2Three" aria-expanded="false" aria-controls="collapseProj2Three" data-i18n="proj2_acc3_head">
+                                            <i class="bi bi-shield-check text-success me-2 fs-5"></i> Lorem Ipsum Tính Năng 3
+                                        </button>
+                                    </h2>
+                                    <div id="collapseProj2Three" class="accordion-collapse collapse" aria-labelledby="headingProj2Three" data-bs-parent="#projectAccordion2">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj2_acc3_body">
+                                            <p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem ante.</p>
+                                            <p class="mb-2">• Dui semper sapien, hendrerit gravida odio felis lacus. Morbi nec metus.</p>
+                                            <p class="mb-0">• Praesent sapien massa, convallis a, pellentesque nec, egestas non, nisi.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Footer Card Dự Án -->
+                            <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                                <span class="fw-bold text-dark small" data-i18n="proj2_role">Vai trò: Lorem Ipsum Developer</span>
+                                <a href="#" target="_blank" class="btn btn-dark rounded-pill px-4 btn-sm text-decoration-none">
+                                    <i class="bi bi-github me-2"></i> GitHub
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Lưới hình ảnh Project 2 (Lorem) trong khung Mac Window -->
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+
+                            <!-- 2 Ảnh phụ xếp chồng bên trái lưới -->
+                            <div class="col-md-6 d-flex flex-column gap-3">
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/cinezone-theater.png" alt="Lorem Project Preview 1" class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/cinezone-admin.png" alt="Lorem Project Preview 2" class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ảnh chính lớn bên phải lưới -->
+                            <div class="col-md-6">
+                                <div class="project-img-frame h-100 p-2 bg-white">
+                                    <img src="img/cinezone-home.png" alt="Lorem Project Main Preview" class="w-100 rounded-3 object-fit-cover" style="height: 380px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION HOẠT ĐỘNG & NGOẠI KHÓA (ACTIVITIES)
+       ========================================================================== -->
+    <section id="activities" class="activities-section container-fluid px-4">
+        <div class="container">
+
+            <!-- Tiêu đề "Hoạt Động & Ngoại Khóa" -->
+            <div class="text-center mb-3 reveal">
+                <span class="activity-section-badge" data-i18n="activities_badge"><i class="bi bi-people-fill me-1"></i> Hoạt Động Ngoại Khóa</span>
+                <h2 class="section-title text-dark mt-2" data-i18n="activities_title">Hoạt Động & Sự Kiện</h2>
+                <p class="section-subtitle text-muted" data-i18n="activities_subtitle">Các hoạt động phong trào, sự kiện học thuật và dự án cộng đồng đã tham gia</p>
+            </div>
+
+            <!-- Khung Thẻ Hoạt Động 1: Polaroid Frame nghiêng bên trái, Mô tả bên phải -->
+            <div class="activity-card-wrapper reveal mb-4">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Khung Polaroid nghiêng góc gắn ảnh -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="polaroid-photo-frame">
+                            <div class="photo-pin-badge">
+                                <i class="bi bi-pin-angle-fill text-danger fs-6"></i>
+                            </div>
+                            <img src="img/cinezone-home.png" alt="Activity Preview 1" class="w-100 rounded-3 object-fit-cover" style="height: 250px;" />
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Mô tả chi tiết hoạt động -->
+                    <div class="col-lg-7 col-md-6">
+                        <div class="p-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i class="bi bi-calendar3 me-1"></i> 2024</span>
+                                <span class="activity-role-pill" data-i18n="act1_role"><i class="bi bi-award-fill me-1"></i> Vai trò: Ban Tổ Chức / Thành Viên</span>
+                            </div>
+                            <h3 class="fw-bold text-dark mb-3" style="font-size: 1.65rem;" data-i18n="act1_title">
+                                LOREM IPSUM - Tên Hoạt Động / Sự Kiện 1
+                            </h3>
+                            <p class="text-muted fs-6 mb-0" data-i18n="act1_desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Khung Thẻ Hoạt Động 2: Polaroid Frame nghiêng góc bên trái, Mô tả bên phải -->
+            <div class="activity-card-wrapper reveal">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Khung Polaroid nghiêng góc gắn ảnh -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="polaroid-photo-frame">
+                            <div class="photo-pin-badge">
+                                <i class="bi bi-pin-angle-fill text-danger fs-6"></i>
+                            </div>
+                            <img src="img/cinezone-theater.png" alt="Activity Preview 2" class="w-100 rounded-3 object-fit-cover" style="height: 250px;" />
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Mô tả chi tiết hoạt động -->
+                    <div class="col-lg-7 col-md-6">
+                        <div class="p-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i class="bi bi-calendar3 me-1"></i> 2023 - 2024</span>
+                                <span class="activity-role-pill" data-i18n="act2_role"><i class="bi bi-award-fill me-1"></i> Vai trò: Thành Viên Tham Gia</span>
+                            </div>
+                            <h3 class="fw-bold text-dark mb-3" style="font-size: 1.65rem;" data-i18n="act2_title">
+                                LOREM IPSUM - Tên Hoạt Động / Sự Kiện 2
+                            </h3>
+                            <p class="text-muted fs-6 mb-0" data-i18n="act2_desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       WAVE DIVIDER (PROJECTS -> FOOTER)
+       ========================================================================== -->
+    <div class="wave-divider wave-footer-top">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 40C360 80 720 20 1080 60C1260 80 1380 40 1440 30V100H0V40Z" fill="#F87C28" />
+        </svg>
+    </div>
+
+    <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+    <footer class="footer-section">
+        <div class="container text-center">
+            <div class="d-flex justify-content-between align-items-center flex-column flex-md-row gap-3">
+                <p class="mb-0 opacity-90">
+                    &copy; 2026 - portfolio - <a href="#privacy" class="footer-link">Privacy</a>
+                </p>
+                <div class="d-flex gap-4">
+                    <a href="https://github.com/bangthanhnguyenit-web" target="_blank" class="text-white opacity-90 fs-5"><i class="bi bi-github"></i></a>
+                    <a href="#" target="_blank" class="text-white opacity-90 fs-5"><i class="bi bi-linkedin"></i></a>
+                    <a href="mailto:bangthanh.nguyen.it@gmail.com" class="text-white opacity-90 fs-5"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       SCROLL TO TOP BUTTON
+       ========================================================================== -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Cuộn lên đầu trang" title="Cuộn lên đầu trang">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle (Cần thiết để chạy tính năng Accordion) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Quản Lý Đa Ngôn Ngữ (VI / EN) -->
+    <script src="js/i18n.js"></script>
+
+    <!-- JavaScript tích hợp xử lý hiệu ứng cuộn và nút Scroll to Top -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Xử lý nút Scroll to Top
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+            if (scrollTopBtn) {
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > 300) {
+                        scrollTopBtn.classList.add("show");
+                    } else {
+                        scrollTopBtn.classList.remove("show");
+                    }
+                });
+
+                scrollTopBtn.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            }
+
+            // 2. Hiệu ứng Reveal on Scroll (Hiện dần khi cuộn trang)
+            const revealElements = document.querySelectorAll(".reveal");
+
+            function checkReveal() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                revealElements.forEach(function (el) {
+                    const boxTop = el.getBoundingClientRect().top;
+                    if (boxTop < triggerBottom) {
+                        el.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkReveal);
+            checkReveal();
+        });
+    </script>
+</body>
+</html>
