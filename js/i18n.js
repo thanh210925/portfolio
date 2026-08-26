@@ -28,7 +28,7 @@ const translations = {
         "skill2_desc": "Xây dựng giao diện responsive, mượt mà và thân thiện với trải nghiệm người dùng.",
         "skill3_title": "Công Cụ & Khác",
         "skill3_desc": "Khả năng đọc hiểu tài liệu chuyên ngành tốt và quản lý mã nguồn linh hoạt.",
-        "skill_eng": "Tiếng Anh (TOEIC)",
+        "skill_eng": "Kỹ năng đọc hiểu Tiếng Anh",
 
         // Timeline Section (Học Vấn & Kinh Nghiệm)
         "timeline_badge": '<i class="bi bi-journal-bookmark-fill me-1"></i> Học Vấn & Kinh Nghiệm',
@@ -42,10 +42,17 @@ const translations = {
         "timeline2_title": "Phát Triển Dự Án Thực Tế & AI",
         "timeline2_desc": 'Thực hiện dự án <strong>CineZone</strong> tích hợp C# .NET 8.0, Machine Learning & Gemini AI API',
         "timeline2_badge": '<i class="bi bi-code-slash me-1"></i> Thực hành chuyên sâu',
-        "timeline3_year": "2023 - 2024",
-        "timeline3_title": "Xây Dựng Nền Tảng Công Nghệ",
-        "timeline3_desc": "Thành thạo lập trình C#, Cấu trúc dữ liệu & Giải thuật, SQL Server & Web Front-end",
-        "timeline3_badge": '<i class="bi bi-check-circle-fill me-1"></i> Hoàn thành nền tảng',
+     "timeline3_year": "2026",
+"timeline3_title": "Công ty Cổ phần Công nghệ BrightStar | Thực tập sinh thiết kế Website",
+"timeline3_desc": `
+    <ul>
+        <li>Tham gia thiết kế, xây dựng và tối ưu giao diện người dùng (UI/UX) cho các dự án web của công ty.</li>
+        <li>Phối hợp với đội ngũ backend để tích hợp API, đảm bảo tính mượt mà và tương thích trên nhiều thiết bị (Responsive Design).</li>
+        <li>Nâng cao tư duy lập trình web, áp dụng các tiêu chuẩn Clean Code và cải thiện tốc độ tải trang.</li>
+    </ul>
+`,
+"timeline3_badge": '<i class="bi bi-check-circle-fill me-1"></i> Thực chiến',
+"timeline3_tag": "Thực tập",
 
         // Projects Section
         "projects_main_title": "Projects",
@@ -61,37 +68,45 @@ const translations = {
                             <p class="mb-2">• Apriori Algorithm: Khai phá quy luật để gợi ý combo bắp nước tối ưu.</p>
                             <p class="mb-0">• Trợ lý ảo AI: Tích hợp Google Gemini API làm chatbot tư vấn lịch chiếu 24/7.</p>`,
         "proj1_acc3_head": '<i class="bi bi-credit-card text-success me-2 fs-5"></i> Thanh toán & Tính năng Quản trị',
-        "proj1_acc3_body": `<p class="mb-2">• Tích hợp cổng thanh toán trực tuyến VNPay và Stripe với cơ chế giữ/hủy chỗ thông minh.</p>
+        "proj1_acc3_body": `<p class="mb-2">• Tích hợp cổng thanh toán trực tuyến VietQR, VNPay và MoMo với cơ chế giữ/hủy chỗ thông minh.</p>
                             <p class="mb-2">• Quản lý lịch chiếu chống xung đột, phòng chiếu, mã giảm giá (Voucher Condition Engine).</p>
                             <p class="mb-0">• Tính lương nhân viên tự động dựa trên bảng công tháng và xuất vé điện tử kèm mã QR Code.</p>`,
-        "proj1_role": "Vai trò: Phát triển Backend & AI Integration",
+        "proj1_role": "Vai trò: Backend & AI Integration Lead",
 
-        "proj2_title": "LOREM IPSUM - Tên Dự Án Mới",
-        "proj2_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "proj2_acc1_head": '<i class="bi bi-layers-half text-warning me-2 fs-5"></i> Lorem Ipsum Tính Năng 1',
-        "proj2_acc1_body": `<p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit lacus nec metus.</p>
-                            <p class="mb-2">• Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula.</p>
-                            <p class="mb-0">• Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>`,
-        "proj2_acc2_head": '<i class="bi bi-gear-wide-connected text-primary me-2 fs-5"></i> Lorem Ipsum Tính Năng 2',
-        "proj2_acc2_body": `<p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum.</p>
-                            <p class="mb-2">• Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</p>
-                            <p class="mb-0">• Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio.</p>`,
-        "proj2_acc3_head": '<i class="bi bi-shield-check text-success me-2 fs-5"></i> Lorem Ipsum Tính Năng 3',
-        "proj2_acc3_body": `<p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem ante.</p>
-                            <p class="mb-2">• Dui semper sapien, hendrerit gravida odio felis lacus. Morbi nec metus.</p>
-                            <p class="mb-0">• Praesent sapien massa, convallis a, pellentesque nec, egestas non, nisi.</p>`,
-        "proj2_role": "Vai trò: Lorem Ipsum Developer",
+        "proj2_title": "MEILING COSMETICS – E-commerce & AI Skincare Platform",
+        "proj2_desc": "Website thương mại điện tử mỹ phẩm cao cấp kết hợp AI Skincare Assistant và hệ thống đặt lịch soi da 3D & tư vấn bác sĩ da liễu.",
+        "proj2_acc1_head": '<i class="bi bi-bag-check text-warning me-2 fs-5"></i> Thương Mại Điện Tử, Thanh Toán & Vận Chuyển',
+        "proj2_acc1_body": `<p class="mb-2">• Xây dựng quy trình e-commerce toàn diện: Sản phẩm, giỏ hàng, wishlist, voucher giảm giá, đánh giá và đặt hàng hoàn chỉnh.</p>
+                            <p class="mb-2">• Tích hợp đa dạng phương thức thanh toán trực tuyến: COD, VNPay và MoMo với cơ chế xử lý giao dịch an toàn.</p>
+                            <p class="mb-0">• Tự động hóa vận chuyển: Tích hợp API Giao Hàng Nhanh (GHN) để tính phí giao hàng thời gian thực và quản lý đơn hàng.</p>`,
+        "proj2_acc2_head": '<i class="bi bi-robot text-primary me-2 fs-5"></i> AI Skincare Assistant & Phân Tích Da Qua Hình Ảnh',
+        "proj2_acc2_body": `<p class="mb-2">• AI Chatbot 24/7: Trợ lý AI hỗ trợ tư vấn chăm sóc da, giải đáp thắc mắc và tương tác trực tiếp với khách hàng.</p>
+                            <p class="mb-2">• Phân tích da qua hình ảnh: Ứng dụng Gemini AI API phân tích tình trạng da từ ảnh chụp và lưu kết quả vào hồ sơ người dùng.</p>
+                            <p class="mb-0">• Cá nhân hóa liệu trình: Gợi ý sản phẩm phù hợp từ cửa hàng và tự động xây dựng skincare routine tối ưu.</p>`,
+        "proj2_acc3_head": '<i class="bi bi-calendar-check text-success me-2 fs-5"></i> Đặt Lịch Soi Da 3D & Admin Dashboard',
+        "proj2_acc3_body": `<p class="mb-2">• Đặt lịch dịch vụ: Xây dựng quy trình đặt lịch soi da 3D VISIA và hẹn tư vấn bác sĩ da liễu cho khách hàng.</p>
+                            <p class="mb-2">• Quản lý lịch hẹn đồng bộ: Giúp khách hàng và Admin theo dõi, điều phối và cập nhật trạng thái lịch hẹn suôn sẻ.</p>
+                            <p class="mb-0">• Admin Dashboard toàn diện: Quản lý sản phẩm, đơn hàng, tồn kho, mã giảm giá, bài viết blog và lịch hẹn.</p>`,
+        "proj2_role": "Vai trò: Fullstack & AI Integration Lead",
 
         // Activities Section (Hoạt Động & Sự Kiện)
         "activities_badge": '<i class="bi bi-people-fill me-1"></i> Hoạt Động & Ngoại Khóa',
         "activities_title": "Hoạt Động & Sự Kiện",
         "activities_subtitle": "Các hoạt động phong trào, sự kiện học thuật và dự án cộng đồng đã tham gia",
-        "act1_title": "LOREM IPSUM - Tên Hoạt Động / Sự Kiện 1",
-        "act1_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "act1_title": "Rotaract Club of One Million Lives Saigon (RAC OMLS)",
+        "act1_desc": `<ul class="activity-desc-list ps-3 mb-0 text-muted">
+            <li class="mb-2">Đồng hành tổ chức và triển khai thành công 3 dự án trọng điểm hướng tới cộng đồng: <strong>MilkBank</strong>, <strong>Đập cầu - Gieo sữa</strong>, và <strong>Winter Donation</strong>.</li>
+            <li class="mb-2">Lên kế hoạch, điều phối và góp phần vận hành trơn tru các hoạt động thiện nguyện, kết nối nguồn lực để hỗ trợ các hoàn cảnh khó khăn.</li>
+            <li>Làm việc nhóm hiệu quả cùng tập thể ban chấp hành và cộng đồng tình nguyện viên nhằm lan tỏa các giá trị nhân văn.</li>
+        </ul>`,
         "act1_role": "Vai trò: Ban Tổ Chức / Thành Viên",
-        "act2_title": "LOREM IPSUM - Tên Hoạt Động / Sự Kiện 2",
-        "act2_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "act2_role": "Vai trò: Thành Viên Tham Gia",
+        "act2_title": "Cộng tác viên thường trực Đoàn Khoa CNTT (Hậu cần)",
+        "act2_desc": `<ul class="activity-desc-list ps-3 mb-0 text-muted">
+            <li class="mb-2">Hỗ trợ lên kế hoạch, chuẩn bị hậu cần và trực tiếp tham gia tổ chức các sự kiện, phong trào sinh viên cấp khoa (như hội trại, hoạt động chào tân sinh viên, các cuộc thi học thuật).</li>
+            <li class="mb-2">Phối hợp nhịp nhàng với Ban Chấp hành Đoàn khoa và các thành viên khác để điều phối chương trình diễn ra suôn sẻ, đúng tiến độ.</li>
+            <li>Phát triển kỹ năng làm việc nhóm, quản lý thời gian và giải quyết vấn đề trong môi trường năng động, tập thể.</li>
+        </ul>`,
+        "act2_role": "Vai trò: Cộng tác viên Hậu cần",
 
         // Footer & Scroll Button
         "scroll_top_title": "Cuộn lên đầu trang"
@@ -121,7 +136,7 @@ const translations = {
         "skill2_desc": "Creating responsive, sleek, user-friendly interfaces with intuitive user experiences.",
         "skill3_title": "Tools & Others",
         "skill3_desc": "Proficient technical document reading ability and flexible version control management.",
-        "skill_eng": "English (TOEIC)",
+        "skill_eng": "English Reading Comprehension",
 
         // Timeline Section
         "timeline_badge": '<i class="bi bi-journal-bookmark-fill me-1"></i> Education & Experience',
@@ -135,10 +150,17 @@ const translations = {
         "timeline2_title": "Real-World Projects & AI Integration",
         "timeline2_desc": 'Developing <strong>CineZone</strong> project integrating C# .NET 8.0, Machine Learning & Gemini AI API',
         "timeline2_badge": '<i class="bi bi-code-slash me-1"></i> Intensive Practice',
-        "timeline3_year": "2023 - 2024",
-        "timeline3_title": "Building Technology Fundamentals",
-        "timeline3_desc": "Proficient in C# programming, Data Structures & Algorithms, SQL Server & Web Front-end",
-        "timeline3_badge": '<i class="bi bi-check-circle-fill me-1"></i> Fundamentals Completed',
+      "timeline3_year": "2026",
+"timeline3_title": "BrightStar Technology JSC | Website Design Intern",
+"timeline3_desc": `
+    <ul>
+        <li>Participated in designing, developing, and optimizing user interfaces (UI/UX) for the company's web projects.</li>
+        <li>Collaborated with the backend team to integrate APIs, ensuring smooth performance and cross-device compatibility through Responsive Design.</li>
+        <li>Improved web development skills by applying Clean Code principles and optimizing page loading performance.</li>
+    </ul>
+`,
+"timeline3_badge": '<i class="bi bi-check-circle-fill me-1"></i> Hands-on Experience',
+"timeline3_tag": "Internship",
 
         // Projects Section
         "projects_main_title": "Projects",
@@ -154,37 +176,45 @@ const translations = {
                             <p class="mb-2">• Apriori Algorithm: Mined association rules for optimal concession combo upselling.</p>
                             <p class="mb-0">• AI Virtual Assistant: Integrated Google Gemini API as a 24/7 intelligent showtime chatbot.</p>`,
         "proj1_acc3_head": '<i class="bi bi-credit-card text-success me-2 fs-5"></i> Payments & Administration Features',
-        "proj1_acc3_body": `<p class="mb-2">• Integrated VNPay & Stripe online payment gateways with smart seat hold/cancellation logic.</p>
+        "proj1_acc3_body": `<p class="mb-2">• Integrated VietQR, VNPay, and MoMo online payment gateways with smart seat hold/cancellation logic.</p>
                             <p class="mb-2">• Conflict-free showtime scheduling, auditorium management, and Voucher Condition Engine.</p>
                             <p class="mb-0">• Automated monthly staff payroll calculation and e-ticket generation with QR Codes.</p>`,
-        "proj1_role": "Role: Backend & AI Integration Developer",
+        "proj1_role": "Role: Backend & AI Integration Lead",
 
-        "proj2_title": "LOREM IPSUM - New Project Title",
-        "proj2_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "proj2_acc1_head": '<i class="bi bi-layers-half text-warning me-2 fs-5"></i> Lorem Ipsum Feature 1',
-        "proj2_acc1_body": `<p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit lacus nec metus.</p>
-                            <p class="mb-2">• Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula.</p>
-                            <p class="mb-0">• Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>`,
-        "proj2_acc2_head": '<i class="bi bi-gear-wide-connected text-primary me-2 fs-5"></i> Lorem Ipsum Feature 2',
-        "proj2_acc2_body": `<p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum.</p>
-                            <p class="mb-2">• Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</p>
-                            <p class="mb-0">• Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio.</p>`,
-        "proj2_acc3_head": '<i class="bi bi-shield-check text-success me-2 fs-5"></i> Lorem Ipsum Feature 3',
-        "proj2_acc3_body": `<p class="mb-2">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem ante.</p>
-                            <p class="mb-2">• Dui semper sapien, hendrerit gravida odio felis lacus. Morbi nec metus.</p>
-                            <p class="mb-0">• Praesent sapien massa, convallis a, pellentesque nec, egestas non, nisi.</p>`,
-        "proj2_role": "Role: Lorem Ipsum Developer",
+        "proj2_title": "MEILING COSMETICS – E-commerce & AI Skincare Platform",
+        "proj2_desc": "Luxury cosmetic e-commerce platform integrating AI Skincare Assistant and 3D skin analysis & dermatologist consultation booking system.",
+        "proj2_acc1_head": '<i class="bi bi-bag-check text-warning me-2 fs-5"></i> E-commerce, Payments & Logistics',
+        "proj2_acc1_body": `<p class="mb-2">• Complete e-commerce workflow: Product catalog, cart, wishlist, coupon/voucher system, reviews, and order placement.</p>
+                            <p class="mb-2">• Multi-channel online payments: Integrated COD, VNPay, and MoMo payment gateways with secure transaction processing.</p>
+                            <p class="mb-0">• Automated shipping: Connected Giao Hàng Nhanh (GHN) API for real-time shipping calculation and order tracking.</p>`,
+        "proj2_acc2_head": '<i class="bi bi-robot text-primary me-2 fs-5"></i> AI Skincare Assistant & Image Analysis',
+        "proj2_acc2_body": `<p class="mb-2">• 24/7 AI Chatbot: Intelligent virtual assistant providing skin care consultations and answering user inquiries in real-time.</p>
+                            <p class="mb-2">• AI Image Skin Analysis: Powered by Gemini AI API to analyze skin conditions from facial photos and save to user profiles.</p>
+                            <p class="mb-0">• Personalized Skincare Routine: Automatically recommends matching store products and crafts tailored daily routines.</p>`,
+        "proj2_acc3_head": '<i class="bi bi-calendar-check text-success me-2 fs-5"></i> 3D Skin Booking & Admin Dashboard',
+        "proj2_acc3_body": `<p class="mb-2">• Service Booking Flow: Appointment scheduling system for 3D VISIA skin analysis and dermatologist consultations.</p>
+                            <p class="mb-2">• Seamless Booking Management: Enables clients to track and Admins to manage and update appointment statuses easily.</p>
+                            <p class="mb-0">• Comprehensive Admin Dashboard: Complete management of products, orders, inventory, vouchers, blogs, and appointments.</p>`,
+        "proj2_role": "Role: Fullstack & AI Integration Lead",
 
         // Activities Section
         "activities_badge": '<i class="bi bi-people-fill me-1"></i> Activities & Events',
         "activities_title": "Activities & Extracurriculars",
         "activities_subtitle": "Academic events, community activities, and team projects participated in",
-        "act1_title": "LOREM IPSUM - Activity Title 1",
-        "act1_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+        "act1_title": "Rotaract Club of One Million Lives Saigon (RAC OMLS)",
+        "act1_desc": `<ul class="activity-desc-list ps-3 mb-0 text-muted">
+            <li class="mb-2">Co-organized and successfully executed 3 key community projects: <strong>MilkBank</strong>, <strong>Bridge Building - Milk Giving</strong>, and <strong>Winter Donation</strong>.</li>
+            <li class="mb-2">Planned, coordinated, and contributed to the smooth operation of charity activities, connecting resources to support underprivileged communities.</li>
+            <li>Collaborated effectively with the executive committee and volunteer network to spread humanistic values.</li>
+        </ul>`,
         "act1_role": "Role: Organizer / Team Member",
-        "act2_title": "LOREM IPSUM - Activity Title 2",
-        "act2_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-        "act2_role": "Role: Participant",
+        "act2_title": "Faculty of IT Youth Union Permanent Collaborator (Logistics)",
+        "act2_desc": `<ul class="activity-desc-list ps-3 mb-0 text-muted">
+            <li class="mb-2">Supported event planning, logistics preparation, and directly organized faculty-level student activities (camps, freshman welcome events, academic competitions).</li>
+            <li class="mb-2">Coordinated smoothly with the Executive Committee of the Faculty Youth Union and team members to run events seamlessly and on schedule.</li>
+            <li>Developed teamwork, time management, and problem-solving skills in a dynamic, collaborative environment.</li>
+        </ul>`,
+        "act2_role": "Role: Logistics Collaborator",
 
         // Footer & Scroll Button
         "scroll_top_title": "Scroll to top"

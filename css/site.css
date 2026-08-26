@@ -6,12 +6,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 :root {
+    /* Main Theme Colors */
     --primary-orange: #FA7D2B;
     --primary-orange-light: #FF9E4A;
     --primary-orange-dark: #E06010;
     --orange-gradient: linear-gradient(135deg, #F87C28 0%, #FA9D4D 50%, #FFA858 100%);
+    
+    /* Background Colors */
     --bg-warm-cream: #FFF7F2;
     --bg-white: #FFFFFF;
+    --bg-activities: linear-gradient(180deg, #FFF7F2 0%, #FFEFE5 50%, #FFF7F2 100%);
+
+    /* Biến màu sắc riêng cho dải sóng SVG (Dễ dàng thay đổi sau này) */
+    --wave-fill-cream: #FFF7F2;
+    --wave-fill-orange: #F87C28;
+
+    /* Text & Shadow Tokens */
     --text-dark: #1E1E1E;
     --text-muted: #555555;
     --card-shadow: 0 12px 30px rgba(250, 125, 43, 0.1);
@@ -360,7 +370,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   WAVE DIVIDERS (ĐƯỜNG GỢN SÓNG PHÂN CHIA SECTION)
+   WAVE DIVIDERS (HIỆU ỨNG SÓNG NHẤP NHÔ LƯỢN LÊN XUỐNG BỒNG BỀNH TỰ NHIÊN)
    -------------------------------------------------------------------------- */
 .wave-divider {
     position: relative;
@@ -368,23 +378,62 @@ body {
     overflow: hidden;
     line-height: 0;
     z-index: 2;
-    margin-top: 1.5rem;
+    margin-top: 0;
 }
 
 .wave-divider svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 90px;
+    width: 100%;
+    height: 95px;
     margin-bottom: -1px;
 }
 
-.wave-hero-bottom svg {
-    fill: var(--bg-warm-cream);
+/* Lớp sóng nền phía sau nhấp nhô nhịp nhàng */
+.wave-bg-path {
+    transform-origin: 50% 100%;
+    animation: waveBounceBg 4.8s ease-in-out infinite alternate;
 }
 
+/* Lớp sóng chính phía trước lượn lên xuống dạt dào */
+.wave-main-path {
+    transform-origin: 50% 100%;
+    animation: waveBounceMain 3.6s ease-in-out infinite alternate;
+}
+
+/* Keyframes lượn lên xuống dạt dào (luôn giữ chân sóng bám chặt đáy) */
+@keyframes waveBounceBg {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.30);
+    }
+    100% {
+        transform: scaleY(1.05);
+    }
+}
+
+@keyframes waveBounceMain {
+    0% {
+        transform: scaleY(1.04);
+    }
+    50% {
+        transform: scaleY(0.98);
+    }
+    100% {
+        transform: scaleY(1.26);
+    }
+}
+
+.wave-hero-bottom svg path,
+.wave-hero-bottom svg {
+    fill: var(--wave-fill-cream);
+}
+
+.wave-footer-top svg path,
 .wave-footer-top svg {
-    fill: var(--primary-orange);
+    fill: var(--wave-fill-orange);
 }
 
 .timeline-wrapper {
@@ -512,19 +561,17 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.35);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
-
 .timeline-container {
     position: relative;
     max-width: 1050px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 0 6rem;
 }
-
 /* Đường trục đứng chính giữa có ánh sáng phát quang */
 .timeline-main-line {
     position: absolute;
     top: 10px;
-    bottom: 10px;
+    bottom: 4rem;
     left: 50%;
     width: 4px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.95) 70%, rgba(255, 255, 255, 0.2) 100%);
@@ -544,9 +591,32 @@ body {
 
 .timeline-left {
     left: 0;
-    text-align: right;
+    text-align: left;
+}
+.timeline-left .timeline-header {
+    justify-content: flex-start;
 }
 
+.timeline-left .timeline-footer {
+    justify-content: flex-start;
+}
+
+.timeline-desc {
+    text-align: left;
+}
+
+.timeline-desc ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.timeline-desc li {
+    margin-bottom: 0.55rem;
+}
+
+.timeline-desc li:last-child {
+    margin-bottom: 0;
+}
 .timeline-right {
     left: 50%;
     text-align: left;
@@ -875,8 +945,51 @@ body {
    SECTION HOẠT ĐỘNG (ACTIVITIES) - POLAROID OFFSET PHOTO CARDS
    -------------------------------------------------------------------------- */
 .activities-section {
-    padding: 1.5rem 0 4rem 0;
+    padding: 3.5rem 0 4.5rem 0;
     position: relative;
+    background: var(--bg-activities);
+    overflow: hidden;
+}
+
+/* Họa tiết quầng sáng mờ nghệ thuật phía sau section Hoạt động */
+.activities-section::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: -8%;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(250, 125, 43, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.activities-section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: -8%;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(250, 125, 43, 0.14) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.activities-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.activity-desc-list {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.activity-desc-list strong {
+    color: var(--text-dark);
 }
 
 .activity-section-badge {
