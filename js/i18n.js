@@ -28,7 +28,7 @@ const translations = {
         "skill2_desc": "Xây dựng giao diện responsive, mượt mà và thân thiện với trải nghiệm người dùng.",
         "skill3_title": "Công Cụ & Khác",
         "skill3_desc": "Khả năng đọc hiểu tài liệu chuyên ngành tốt và quản lý mã nguồn linh hoạt.",
-        "skill_eng": "Kỹ năng đọc hiểu Tiếng Anh",
+        "skill_eng": "Đọc hiểu Tiếng Anh",
 
         // Timeline Section (Học Vấn & Kinh Nghiệm)
         "timeline_badge": '<i class="bi bi-journal-bookmark-fill me-1"></i> Học Vấn & Kinh Nghiệm',
@@ -38,21 +38,17 @@ const translations = {
         "timeline1_school": "Trường Đại học Ngoại Ngữ Tin học TPHCM (HUFLIT)",
         "timeline1_major": 'Chuyên ngành: <strong>Công Nghệ Phần Mềm</strong>',
         "timeline1_status": '<i class="bi bi-mortarboard-fill me-1"></i> Đang theo học',
-        "timeline2_year": "2024 - Hiện tại",
-        "timeline2_title": "Phát Triển Dự Án Thực Tế & AI",
-        "timeline2_desc": 'Thực hiện dự án <strong>CineZone</strong> tích hợp C# .NET 8.0, Machine Learning & Gemini AI API',
-        "timeline2_badge": '<i class="bi bi-code-slash me-1"></i> Thực hành chuyên sâu',
-     "timeline3_year": "2026",
-"timeline3_title": "Công ty Cổ phần Công nghệ BrightStar | Thực tập sinh thiết kế Website",
-"timeline3_desc": `
+        "timeline2_year": "2026 - đến nay",
+        "timeline2_title": "Công ty Cổ phần Công nghệ BrightStar | Thực tập sinh thiết kế Website",
+        "timeline2_desc": `
     <ul>
         <li>Tham gia thiết kế, xây dựng và tối ưu giao diện người dùng (UI/UX) cho các dự án web của công ty.</li>
         <li>Phối hợp với đội ngũ backend để tích hợp API, đảm bảo tính mượt mà và tương thích trên nhiều thiết bị (Responsive Design).</li>
         <li>Nâng cao tư duy lập trình web, áp dụng các tiêu chuẩn Clean Code và cải thiện tốc độ tải trang.</li>
     </ul>
 `,
-"timeline3_badge": '<i class="bi bi-check-circle-fill me-1"></i> Thực chiến',
-"timeline3_tag": "Thực tập",
+        "timeline2_badge": '<i class="bi bi-check-circle-fill me-1"></i> Thực chiến',
+        "timeline2_tag": "Thực tập",
 
         // Projects Section
         "projects_main_title": "Projects",
@@ -108,6 +104,26 @@ const translations = {
         </ul>`,
         "act2_role": "Vai trò: Cộng tác viên Hậu cần",
 
+        // Contact Section (Dev Terminal Suite)
+        "contact_badge": '<i class="bi bi-chat-left-dots-fill me-1"></i> Liên Hệ & Hợp Tác',
+        "contact_status": "SẮN SÀNG HỢP TÁC & TUYỂN DỤNG",
+        "contact_title": "Khởi Đầu Dự Án Tiếp Theo Cùng Tôi",
+        "contact_subtitle": "Dù bạn có ý tưởng dự án mới, vị trí tuyển dụng tiềm năng hay chỉ muốn kết nối giao lưu — tôi luôn sẵn sàng trò chuyện!",
+        "contact_dev_quote": '"Đam mê xây dựng các hệ thống Web & AI hiệu năng cao, tối ưu trải nghiệm người dùng và tư duy lập trình hệ thống sạch."',
+        "contact_call_label": "SỐ ĐIỆN THOẠI / ZALO",
+        "contact_email_label": "EMAIL TRỰC TIẾP",
+        "contact_loc_label": "KHU VỰC LÀM VIỆC",
+        "contact_loc_val": "TP. Hồ Chí Minh, Việt Nam",
+        "contact_social_label": "Kết nối với tôi",
+        "contact_form_title": "Gửi tin nhắn cho tôi",
+        "contact_form_sub": "Tôi sẽ phản hồi trong thời gian sớm nhất!",
+        "form_name": "Họ và tên của bạn",
+        "form_email": "Email liên hệ",
+        "form_subject": "Chủ đề (Tuyển dụng / Dự án / Hợp tác)",
+        "form_message": "Nội dung tin nhắn của bạn...",
+        "contact_btn": "GỬI TIN NHẮN TỰ ĐỘNG",
+        "contact_secure": "Thông tin của bạn được bảo mật tuyệt đối",
+
         // Footer & Scroll Button
         "scroll_top_title": "Cuộn lên đầu trang"
     },
@@ -136,7 +152,7 @@ const translations = {
         "skill2_desc": "Creating responsive, sleek, user-friendly interfaces with intuitive user experiences.",
         "skill3_title": "Tools & Others",
         "skill3_desc": "Proficient technical document reading ability and flexible version control management.",
-        "skill_eng": "English Reading Comprehension",
+        "skill_eng": "Technical English Reading",
 
         // Timeline Section
         "timeline_badge": '<i class="bi bi-journal-bookmark-fill me-1"></i> Education & Experience',
@@ -146,21 +162,17 @@ const translations = {
         "timeline1_school": "HUFLIT University (Ho Chi Minh City)",
         "timeline1_major": 'Major: <strong>Software Engineering</strong>',
         "timeline1_status": '<i class="bi bi-mortarboard-fill me-1"></i> Currently Studying',
-        "timeline2_year": "2024 - Present",
-        "timeline2_title": "Real-World Projects & AI Integration",
-        "timeline2_desc": 'Developing <strong>CineZone</strong> project integrating C# .NET 8.0, Machine Learning & Gemini AI API',
-        "timeline2_badge": '<i class="bi bi-code-slash me-1"></i> Intensive Practice',
-      "timeline3_year": "2026",
-"timeline3_title": "BrightStar Technology JSC | Website Design Intern",
-"timeline3_desc": `
+        "timeline2_year": "2026 - Present",
+        "timeline2_title": "BrightStar Technology JSC | Website Design Intern",
+        "timeline2_desc": `
     <ul>
         <li>Participated in designing, developing, and optimizing user interfaces (UI/UX) for the company's web projects.</li>
         <li>Collaborated with the backend team to integrate APIs, ensuring smooth performance and cross-device compatibility through Responsive Design.</li>
         <li>Improved web development skills by applying Clean Code principles and optimizing page loading performance.</li>
     </ul>
 `,
-"timeline3_badge": '<i class="bi bi-check-circle-fill me-1"></i> Hands-on Experience',
-"timeline3_tag": "Internship",
+        "timeline2_badge": '<i class="bi bi-check-circle-fill me-1"></i> Hands-on Experience',
+        "timeline2_tag": "Internship",
 
         // Projects Section
         "projects_main_title": "Projects",
@@ -215,6 +227,26 @@ const translations = {
             <li>Developed teamwork, time management, and problem-solving skills in a dynamic, collaborative environment.</li>
         </ul>`,
         "act2_role": "Role: Logistics Collaborator",
+
+        // Contact Section (Dev Terminal Suite)
+        "contact_badge": '<i class="bi bi-chat-left-dots-fill me-1"></i> Get In Touch',
+        "contact_status": "READY FOR COLLABORATION & RECRUITMENT",
+        "contact_title": "Start Your Next Project With Me",
+        "contact_subtitle": "Whether you have a new project idea, a potential job opening, or just want to connect— I'm always open to chat!",
+        "contact_dev_quote": '"Passionate about building high-performance Web & AI systems, optimizing user experience and clean code architecture."',
+        "contact_call_label": "PHONE / ZALO",
+        "contact_email_label": "DIRECT EMAIL",
+        "contact_loc_label": "LOCATION",
+        "contact_loc_val": "Ho Chi Minh City, Vietnam",
+        "contact_social_label": "Connect with me",
+        "contact_form_title": "Send Me A Message",
+        "contact_form_sub": "I will respond as soon as possible!",
+        "form_name": "Your Full Name",
+        "form_email": "Your Contact Email",
+        "form_subject": "Subject (Hiring / Project / Inquiry)",
+        "form_message": "Your Message Content...",
+        "contact_btn": "SEND AUTOMATIC MESSAGE",
+        "contact_secure": "Your information is 100% secure",
 
         // Footer & Scroll Button
         "scroll_top_title": "Scroll to top"
