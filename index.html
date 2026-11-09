@@ -89,7 +89,7 @@
                             </a>
                         </div>
 
-                        <a href="#" class="btn-download-cv" data-i18n="nav_download_cv">
+                        <a href="#cvPreviewModal" data-bs-toggle="modal" data-bs-target="#cvPreviewModal" class="btn-download-cv" data-i18n="nav_download_cv" role="button">
                             Tải CV <i class="bi bi-download ms-1"></i>
                         </a>
                     </div>
@@ -133,10 +133,13 @@
                         với lập trình web. Mục tiêu của mình là thiết kế và xây dựng nên những chiếc web thật ấn tượng,
                         không chỉ mượt mà ở giao diện mà còn phải mạnh mẽ từ sâu bên trong.
                     </p>
-                    <div class="hero-cta-wrapper">
+                    <div class="hero-cta-wrapper d-flex flex-wrap gap-3 align-items-center">
                         <a href="#projects" class="btn-hero-cta text-decoration-none" data-i18n="hero_cta">
                             <i class="bi bi-folder-fill me-1"></i> Xem dự án của tôi <i
                                 class="bi bi-arrow-right arrow-icon"></i>
+                        </a>
+                        <a href="#cvPreviewModal" data-bs-toggle="modal" data-bs-target="#cvPreviewModal" class="btn-hero-cv-cta text-decoration-none" data-i18n="hero_cv_btn" role="button">
+                            <i class="bi bi-file-earmark-pdf-fill me-1"></i> Xem & Tải CV
                         </a>
                     </div>
                 </div>
@@ -155,8 +158,10 @@
         <!-- WAVE DIVIDER (HERO -> SKILLS: Lượn sóng từ nền cam sang nền sáng) -->
         <div class="wave-divider wave-hero-bottom">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="wave-bg-path" opacity="0.35" d="M0 25C320 75 640 15 960 65C1120 90 1300 45 1440 35V200H0Z" fill="var(--wave-fill-cream)" />
-                <path class="wave-main-path" d="M0 45C240 85 480 95 720 55C960 15 1200 25 1440 45V200H0Z" fill="var(--wave-fill-cream)" />
+                <path class="wave-bg-path" opacity="0.35" d="M0 25C320 75 640 15 960 65C1120 90 1300 45 1440 35V200H0Z"
+                    fill="var(--wave-fill-cream)" />
+                <path class="wave-main-path" d="M0 45C240 85 480 95 720 55C960 15 1200 25 1440 45V200H0Z"
+                    fill="var(--wave-fill-cream)" />
             </svg>
         </div>
     </div>
@@ -192,11 +197,23 @@
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>ASP.NET Core MVC</span>
+                                <span>.NET (Core & MVC)</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>SQL Server</span>
+                                <span>Entity Framework Core</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>PostgreSQL & MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>SQL Server & Firebase</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
@@ -223,15 +240,23 @@
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span>ReactJS</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
                                 <span>Bootstrap 5</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>JavaScript (Basic)</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>Figma / Canva</span>
+                                <span>Figma</span>
                             </div>
                         </div>
                     </div>
@@ -243,9 +268,9 @@
                         <div class="skill-icon-circle">
                             <i class="bi bi-tools"></i>
                         </div>
-                        <h3 class="skill-card-title" data-i18n="skill3_title">Công Cụ & Khác</h3>
+                        <h3 class="skill-card-title" data-i18n="skill3_title">Kiểm Thử & Công Cụ</h3>
                         <p class="skill-card-desc" data-i18n="skill3_desc">
-                            Khả năng đọc hiểu tài liệu chuyên ngành tốt và quản lý mã nguồn linh hoạt.
+                            Quy trình kiểm thử chất lượng, quản lý mã nguồn linh hoạt và cộng tác dự án hiệu quả.
                         </p>
                         <div class="skill-list mx-auto">
                             <div class="skill-item">
@@ -254,19 +279,23 @@
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>Visual Studio & MS Office</span>
+                                <span>Postman & Swagger</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>Zoho</span>
+                                <span>Selenium & MSTest</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span data-i18n="skill_eng">Đọc hiểu tiếng Anh</span>
+                                <span>Jira & Zoho</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-check-icon"><i class="bi bi-check"></i></span>
-                                <span>Teamwork</span>
+                                <span>Visual Studio & VS Code</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-check-icon"><i class="bi bi-check"></i></span>
+                                <span data-i18n="skill_eng">Tiếng Anh chuyên ngành</span>
                             </div>
                         </div>
                     </div>
@@ -281,8 +310,10 @@
     <!-- WAVE DIVIDER (SKILLS -> TIMELINE: Lượn sóng chuyển tiếp sang nền cam) -->
     <div class="wave-divider wave-footer-top">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="wave-bg-path" opacity="0.35" d="M0 20C320 80 640 30 960 75C1180 95 1320 40 1440 30V200H0Z" fill="var(--wave-fill-orange)" />
-            <path class="wave-main-path" d="M0 40C360 80 720 10 1080 70C1260 90 1380 50 1440 40V200H0Z" fill="var(--wave-fill-orange)" />
+            <path class="wave-bg-path" opacity="0.35" d="M0 20C320 80 640 30 960 75C1180 95 1320 40 1440 30V200H0Z"
+                fill="var(--wave-fill-orange)" />
+            <path class="wave-main-path" d="M0 40C360 80 720 10 1080 70C1260 90 1380 50 1440 40V200H0Z"
+                fill="var(--wave-fill-orange)" />
         </svg>
     </div>
 
@@ -311,7 +342,8 @@
                         </div>
                         <h5 class="timeline-title" data-i18n="timeline1_school">Trường Đại học Ngoại Ngữ Tin học TPHCM
                             (HUFLIT)</h5>
-                        <p class="timeline-desc" data-i18n="timeline1_major">Chuyên ngành: <strong>Công Nghệ Phần Mềm</strong></p>
+                        <p class="timeline-desc" data-i18n="timeline1_major">Chuyên ngành: <strong>Công Nghệ Phần
+                                Mềm</strong></p>
 
                         <div class="timeline-footer">
                             <span class="timeline-badge badge-active" data-i18n="timeline1_status"><i
@@ -328,16 +360,21 @@
                     </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h4 class="timeline-year" data-i18n="timeline2_year">2024 - 2026</h4>
+                            <h4 class="timeline-year" data-i18n="timeline2_year">07.2026 - 10.2026</h4>
                         </div>
-                        <h5 class="timeline-title" data-i18n="timeline2_title">Phát Triển Dự Án Thực Tế & AI</h5>
-                        <h6>C# - Javascripts - HTML</h6>
-                        <p class="timeline-desc" data-i18n="timeline2_desc">Thực hiện dự án <strong>CineZone</strong>
-                            tích hợp C# .NET 8.0, Machine Learning & Gemini AI API</p>
+                        <h5 class="timeline-title" data-i18n="timeline2_title">CÔNG TY CỔ PHẦN CÔNG NGHỆ BRIGHTSTAR</h5>
+                        <h6 data-i18n="timeline2_role">Thực tập sinh - PHP / Laravel</h6>
+                        <div class="timeline-desc" data-i18n="timeline2_desc">
+                            <ul>
+                                <li>Phát triển và bảo trì các module website sử dụng PHP và Laravel framework.</li>
+                                <li>Phối hợp thiết kế, tối ưu giao diện người dùng (UI/UX) và tích hợp API mượt mà.</li>
+                                <li>Áp dụng các tiêu chuẩn Clean Code và cải thiện tốc độ tải trang.</li>
+                            </ul>
+                        </div>
                         <div class="timeline-footer">
                             <span class="timeline-badge badge-highlight" data-i18n="timeline2_badge"><i
-                                    class="bi bi-code-slash me-1"></i> Thực hành chuyên sâu</span>
-                            <span class="timeline-tag">AI Integration</span>
+                                    class="bi bi-check-circle-fill me-1"></i> Thực chiến</span>
+                            <span class="timeline-tag" data-i18n="timeline2_tag">PHP / Laravel</span>
                         </div>
                     </div>
                 </div>
@@ -349,785 +386,1015 @@
 
         <!-- WAVE DIVIDER (TIMELINE -> PROJECTS: Lượn sóng sang phần Projects) -->
         <div class="wave-divider wave-hero-bottom">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path class="wave-bg-path" opacity="0.35" d="M0 15C280 65 560 30 840 70C1120 95 1300 25 1440 40V200H0Z" fill="var(--wave-fill-cream)" />
-                <path class="wave-main-path" d="M0 35C240 70 480 90 720 60C960 30 1200 10 1440 35V200H0Z" fill="var(--wave-fill-cream)" />
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-bg-path" opacity="0.35" d="M0 15C280 65 560 30 840 70C1120 95 1300 25 1440 40V200H0Z"
+                    fill="var(--wave-fill-cream)" />
+                <path class="wave-main-path" d="M0 35C240 70 480 90 720 60C960 30 1200 10 1440 35V200H0Z"
+                    fill="var(--wave-fill-cream)" />
             </svg>
         </div>
     </div>
 
-            <!-- ==========================================================================
+    <!-- ==========================================================================
        SECTION PROJECTS (CINEZONE)
        ========================================================================== -->
-            <section id="projects" class="projects-section container-fluid px-4">
-                <div class="container">
+    <section id="projects" class="projects-section container-fluid px-4">
+        <div class="container">
 
-                    <!-- Tiêu đề "Projects" -->
-                    <div class="mb-4 reveal">
-                        <h2 class="projects-title" data-i18n="projects_main_title">Projects</h2>
-                    </div>
-
-                    <!-- Khung dự án chính -->
-                    <div class="project-card-wrapper reveal">
-                        <div class="row align-items-center g-4 g-lg-5">
-
-                            <!-- Cột trái: Lưới hình ảnh CineZone nghệ thuật dạng Mac Window Browser Mockup -->
-                            <div class="col-lg-6">
-                                <div class="row g-3">
-
-                                    <!-- Ảnh chính lớn (Trang chủ CineZone) trong khung Mac Window -->
-                                    <div class="col-md-6">
-                                        <div class="browser-window-frame h-100">
-                                            <div class="window-bar">
-                                                <div class="window-dots">
-                                                    <span class="dot-red"></span>
-                                                    <span class="dot-yellow"></span>
-                                                    <span class="dot-green"></span>
-                                                </div>
-                                                <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/" target="_blank"
-                                                   class="window-url-badge ms-auto me-auto text-decoration-none" title="Truy cập CineZone Website Live">
-                                                    <i class="bi bi-lock-fill text-success me-1"></i> cinezone.azurewebsites.net
-                                                </a>
-                                            </div>
-                                            <div class="p-2">
-                                                <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/" target="_blank" title="Truy cập CineZone Website Live">
-                                                    <img src="img/cinezone-home.png" alt="CineZone Home"
-                                                        class="w-100 rounded-3 object-fit-cover" style="height: 335px;" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 2 Ảnh phụ xếp chồng trong khung Mac Window -->
-                                    <div class="col-md-6 d-flex flex-column gap-3">
-                                        <div class="browser-window-frame">
-                                            <div class="window-bar">
-                                                <div class="window-dots">
-                                                    <span class="dot-red"></span>
-                                                    <span class="dot-yellow"></span>
-                                                    <span class="dot-green"></span>
-                                                </div>
-                                            </div>
-                                            <div class="p-2" style="height: 145px;">
-                                                <img src="img/cinezone-theater.png" alt="CineZone Theaters"
-                                                    class="w-100 h-100 rounded-3 object-fit-cover" />
-                                            </div>
-                                        </div>
-                                        <div class="browser-window-frame">
-                                            <div class="window-bar">
-                                                <div class="window-dots">
-                                                    <span class="dot-red"></span>
-                                                    <span class="dot-yellow"></span>
-                                                    <span class="dot-green"></span>
-                                                </div>
-                                            </div>
-                                            <div class="p-2" style="height: 145px;">
-                                                <img src="img/cinezone-admin.png" alt="CineZone Admin"
-                                                    class="w-100 h-100 rounded-3 object-fit-cover" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Cột phải: Nội dung mô tả & Accordion chi tiết -->
-                            <div class="col-lg-6">
-                                <div class="p-2 p-lg-3">
-
-                                    <div class="d-flex flex-wrap gap-2 mb-3">
-                                        <span class="tech-chip chip-orange"><i class="bi bi-code-slash"></i> C# .NET 8.0 MVC</span>
-                                        <span class="tech-chip chip-blue"><i class="bi bi-database"></i> Entity Framework Core & SQL Server</span>
-                                        <span class="tech-chip chip-green"><i class="bi bi-lightning-charge"></i> SignalR</span>
-                                        <span class="tech-chip chip-purple"><i class="bi bi-robot"></i> Gemini AI API</span>
-                                        <span class="tech-chip chip-blue"><i class="bi bi-diagram-3"></i> Machine Learning (K-Means, KNN, Apriori)</span>
-                                        <span class="tech-chip chip-orange"><i class="bi bi-person-bounding-box"></i> Face AI</span>
-                                        <span class="tech-chip chip-green"><i class="bi bi-credit-card"></i> VietQR, VNPay, MoMo</span>
-                                        <span class="tech-chip chip-purple"><i class="bi bi-shield-check"></i> JWT / RBAC</span>
-                                    </div>
-
-                                    <h3 class="fw-bold text-dark mb-2" style="font-size: 1.85rem;"
-                                        data-i18n="proj1_title">
-                                        CINEZONE - Hệ Thống Quản Lý & Đặt Vé Xem Phim
-                                    </h3>
-                                    <p class="text-muted mb-4 fs-6" data-i18n="proj1_desc">
-                                        Nền tảng web toàn diện số hóa quy trình vận hành giữa khách hàng và bộ phận quản
-                                        lý rạp chiếu phim, giải quyết bài toán đặt chỗ thời gian thực và tự động hóa
-                                        doanh nghiệp.
-                                    </p>
-
-                                    <!-- Accordion Chi Tiết Tính Năng -->
-                                    <div class="accordion custom-accordion mb-4" id="projectAccordion">
-
-                                        <!-- Mục 1: Backend -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="false" aria-controls="collapseOne"
-                                                    data-i18n="proj1_acc1_head">
-                                                    <i class="bi bi-hdd-network text-warning me-2 fs-5"></i> Kiến trúc &
-                                                    Vận hành Backend
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
-                                                <div class="accordion-body text-secondary small"
-                                                    data-i18n="proj1_acc1_body">
-                                                    <p class="mb-2">• Phát triển trên nền tảng C# / .NET 8.0 MVC kết hợp
-                                                        với Entity Framework Core và SQL Server.</p>
-                                                    <p class="mb-2">• Ứng dụng SignalR để đồng bộ hóa dữ liệu thời gian
-                                                        thực cho tính năng chọn ghế và chat hỗ trợ.</p>
-                                                    <p class="mb-0">• Thiết lập hệ thống bảo mật đa lớp (JWT, Cookie,
-                                                        BCrypt) và phân quyền hạt nhân (RBAC) chi tiết.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Mục 2: AI & ML -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo"
-                                                    data-i18n="proj1_acc2_head">
-                                                    <i class="bi bi-cpu text-primary me-2 fs-5"></i> Tích hợp AI &
-                                                    Machine Learning
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo" data-bs-parent="#projectAccordion">
-                                                <div class="accordion-body text-secondary small"
-                                                    data-i18n="proj1_acc2_body">
-                                                    <p class="mb-2">• Face AI: Tích hợp nhận diện khuôn mặt tự động chấm công và đăng ký nhân viên.</p>
-                                                    <p class="mb-2">• Machine Learning (K-Means & KNN): Xây dựng hệ thống gợi ý phim cá nhân hóa theo hành vi người dùng.</p>
-                                                    <p class="mb-2">• Apriori Algorithm: Khai phá quy luật liên kết để gợi ý combo bắp nước tối ưu.</p>
-                                                    <p class="mb-0">• Trợ lý ảo AI: Tích hợp Gemini AI API làm chatbot tư vấn lịch chiếu 24/7.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Mục 3: Thanh toán & Quản trị -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree"
-                                                    data-i18n="proj1_acc3_head">
-                                                    <i class="bi bi-credit-card text-success me-2 fs-5"></i> Thanh toán
-                                                    & Tính năng Quản trị
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="headingThree" data-bs-parent="#projectAccordion">
-                                                <div class="accordion-body text-secondary small"
-                                                    data-i18n="proj1_acc3_body">
-                                                    <p class="mb-2">• Tích hợp cổng thanh toán trực tuyến VietQR, VNPay và MoMo với cơ chế giữ/hủy chỗ thông minh.</p>
-                                                    <p class="mb-2">• Quản lý lịch chiếu chống xung đột, phòng chiếu, mã
-                                                        giảm giá (Voucher Condition Engine).</p>
-                                                    <p class="mb-0">• Tính lương nhân viên tự động dựa trên bảng công
-                                                        tháng và xuất vé điện tử kèm mã QR Code.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Footer Card Dự Án 1 -->
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top">
-                                        <span class="fw-bold text-dark small" data-i18n="proj1_role">Vai trò: Backend & AI Integration Lead</span>
-                                        <div class="d-flex flex-wrap align-items-center gap-2">
-                                            <a href="https://github.com/bangthanhnguyenit-web/cinezone" target="_blank"
-                                                class="btn btn-dark rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
-                                                <i class="bi bi-github me-1"></i> GitHub
-                                            </a>
-                                            <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/" target="_blank"
-                                                class="btn btn-outline-primary rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
-                                                <i class="bi bi-globe me-1"></i> Client Web
-                                            </a>
-                                            <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/admin/login" target="_blank"
-                                                class="btn btn-outline-danger rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
-                                                <i class="bi bi-shield-lock me-1"></i> Admin Portal
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Khung dự án 2 (Bố cục ngược: Mô tả bên trái, Ảnh bên phải) -->
-                    <div class="project-card-wrapper reveal mt-5">
-                        <div class="row align-items-center g-4 g-lg-5">
-
-                            <!-- Cột trái: Nội dung mô tả & Accordion chi tiết -->
-                            <div class="col-lg-6">
-                                <div class="p-2 p-lg-3">
-
-                                    <div class="d-flex flex-wrap gap-2 mb-3">
-                                        <span class="tech-chip chip-orange"><i class="bi bi-code-slash"></i> .NET 10 MVC</span>
-                                        <span class="tech-chip chip-blue"><i class="bi bi-database"></i> EF Core & SQL Server</span>
-                                        <span class="tech-chip chip-purple"><i class="bi bi-robot"></i> Gemini AI</span>
-                                        <span class="tech-chip chip-green"><i class="bi bi-credit-card"></i> VNPay & MoMo</span>
-                                        <span class="tech-chip chip-orange"><i class="bi bi-truck"></i> GHN & Cloudinary</span>
-                                    </div>
-
-                                    <h3 class="fw-bold text-dark mb-2" style="font-size: 1.85rem;"
-                                        data-i18n="proj2_title">
-                                        MEILING COSMETICS – E-commerce & AI Skincare Platform
-                                    </h3>
-                                    <p class="text-muted mb-4 fs-6" data-i18n="proj2_desc">
-                                        Website thương mại điện tử mỹ phẩm cao cấp kết hợp AI Skincare Assistant và hệ thống đặt lịch soi da 3D & tư vấn bác sĩ da liễu.
-                                    </p>
-
-                                    <!-- Accordion Chi Tiết Tính Năng -->
-                                    <div class="accordion custom-accordion mb-4" id="projectAccordion2">
-
-                                        <!-- Mục 1 -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingProj2One">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseProj2One"
-                                                    aria-expanded="false" aria-controls="collapseProj2One"
-                                                    data-i18n="proj2_acc1_head">
-                                                    <i class="bi bi-bag-check text-warning me-2 fs-5"></i> Thương Mại Điện Tử, Thanh Toán & Vận Chuyển
-                                                </button>
-                                            </h2>
-                                            <div id="collapseProj2One" class="accordion-collapse collapse"
-                                                aria-labelledby="headingProj2One" data-bs-parent="#projectAccordion2">
-                                                <div class="accordion-body text-secondary small"
-                                                    data-i18n="proj2_acc1_body">
-                                                    <p class="mb-2">• Xây dựng quy trình e-commerce toàn diện: Sản phẩm, giỏ hàng, wishlist, voucher giảm giá, đánh giá và đặt hàng hoàn chỉnh.</p>
-                                                    <p class="mb-2">• Tích hợp đa dạng phương thức thanh toán trực tuyến: COD, VNPay và MoMo với cơ chế xử lý giao dịch an toàn.</p>
-                                                    <p class="mb-0">• Tự động hóa vận chuyển: Tích hợp API Giao Hàng Nhanh (GHN) để tính phí giao hàng thời gian thực và quản lý đơn hàng.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Mục 2 -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingProj2Two">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseProj2Two"
-                                                    aria-expanded="false" aria-controls="collapseProj2Two"
-                                                    data-i18n="proj2_acc2_head">
-                                                    <i class="bi bi-robot text-primary me-2 fs-5"></i> AI Skincare Assistant & Phân Tích Da Qua Hình Ảnh
-                                                </button>
-                                            </h2>
-                                            <div id="collapseProj2Two" class="accordion-collapse collapse"
-                                                aria-labelledby="headingProj2Two" data-bs-parent="#projectAccordion2">
-                                                <div class="accordion-body text-secondary small"
-                                                    data-i18n="proj2_acc2_body">
-                                                    <p class="mb-2">• AI Chatbot 24/7: Trợ lý AI hỗ trợ tư vấn chăm sóc da, giải đáp thắc mắc và tương tác trực tiếp với khách hàng.</p>
-                                                    <p class="mb-2">• Phân tích da qua hình ảnh: Ứng dụng Gemini AI API phân tích tình trạng da từ ảnh chụp và lưu kết quả vào hồ sơ người dùng.</p>
-                                                    <p class="mb-0">• Cá nhân hóa liệu trình: Gợi ý sản phẩm phù hợp từ cửa hàng và tự động xây dựng skincare routine tối ưu.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Mục 3 -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingProj2Three">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseProj2Three"
-                                                    aria-expanded="false" aria-controls="collapseProj2Three"
-                                                    data-i18n="proj2_acc3_head">
-                                                    <i class="bi bi-calendar-check text-success me-2 fs-5"></i> Đặt Lịch Soi Da 3D & Admin Dashboard
-                                                </button>
-                                            </h2>
-                                            <div id="collapseProj2Three" class="accordion-collapse collapse"
-                                                aria-labelledby="headingProj2Three" data-bs-parent="#projectAccordion2">
-                                                <div class="accordion-body text-secondary small"
-                                                    data-i18n="proj2_acc3_body">
-                                                    <p class="mb-2">• Đặt lịch dịch vụ: Xây dựng quy trình đặt lịch soi da 3D VISIA và hẹn tư vấn bác sĩ da liễu cho khách hàng.</p>
-                                                    <p class="mb-2">• Quản lý lịch hẹn đồng bộ: Giúp khách hàng và Admin theo dõi, điều phối và cập nhật trạng thái lịch hẹn suôn sẻ.</p>
-                                                    <p class="mb-0">• Admin Dashboard toàn diện: Quản lý sản phẩm, đơn hàng, tồn kho, mã giảm giá, bài viết blog và lịch hẹn.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Footer Card Dự Án 2 -->
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top">
-                                        <span class="fw-bold text-dark small" data-i18n="proj2_role">Vai trò: Fullstack & AI Integration Lead</span>
-                                        <div class="d-flex flex-wrap align-items-center gap-2">
-                                            <a href="#" target="_blank"
-                                                class="btn btn-dark rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
-                                                <i class="bi bi-github me-1"></i> GitHub
-                                            </a>
-                                            <a href="#" target="_blank"
-                                                class="btn btn-outline-primary rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
-                                                <i class="bi bi-globe me-1"></i> Client Web
-                                            </a>
-                                            <a href="#" target="_blank"
-                                                class="btn btn-outline-danger rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
-                                                <i class="bi bi-shield-lock me-1"></i> Admin Portal
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Cột phải: Lưới hình ảnh Project 2 (Lorem) trong khung Mac Window -->
-                            <div class="col-lg-6">
-                                <div class="row g-3">
-
-                                    <!-- 2 Ảnh phụ xếp chồng bên trái lưới -->
-                                    <div class="col-md-6 d-flex flex-column gap-3">
-                                        <div class="browser-window-frame">
-                                            <div class="window-bar">
-                                                <div class="window-dots">
-                                                    <span class="dot-red"></span>
-                                                    <span class="dot-yellow"></span>
-                                                    <span class="dot-green"></span>
-                                                </div>
-                                            </div>
-                                            <div class="p-2" style="height: 145px;">
-                                                <img src="img/AI.jpg" alt="Lorem Project Preview 1"
-                                                    class="w-100 h-100 rounded-3 object-fit-cover" />
-                                            </div>
-                                        </div>
-                                        <div class="browser-window-frame">
-                                            <div class="window-bar">
-                                                <div class="window-dots">
-                                                    <span class="dot-red"></span>
-                                                    <span class="dot-yellow"></span>
-                                                    <span class="dot-green"></span>
-                                                </div>
-                                            </div>
-                                            <div class="p-2" style="height: 145px;">
-                                                <img src="img/blog.png" alt="Lorem Project Preview 2"
-                                                    class="w-100 h-100 rounded-3 object-fit-cover" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Ảnh chính lớn bên phải lưới -->
-                                    <div class="col-md-6">
-                                        <div class="project-img-frame h-100 p-2 bg-white">
-                                            <img src="img/home_mp.png" alt="Lorem Project Main Preview"
-                                                class="w-100 rounded-3 object-fit-cover" style="height: 380px;" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- ==========================================================================
-       SECTION HOẠT ĐỘNG & NGOẠI KHÓA (ACTIVITIES)
-       ========================================================================== -->
-            <section id="activities" class="activities-section container-fluid px-4">
-                <div class="container">
-
-                    <!-- Tiêu đề "Hoạt Động & Ngoại Khóa" -->
-                    <div class="text-center mb-3 reveal">
-                        <span class="activity-section-badge" data-i18n="activities_badge"><i
-                                class="bi bi-people-fill me-1"></i> Hoạt Động Ngoại Khóa</span>
-                        <h2 class="section-title text-dark mt-2" data-i18n="activities_title">Hoạt Động & Sự Kiện</h2>
-                        <p class="section-subtitle text-muted" data-i18n="activities_subtitle">Các hoạt động phong trào,
-                            sự kiện học thuật và dự án cộng đồng đã tham gia</p>
-                    </div>
-
-                    <!-- Khung Thẻ Hoạt Động 1: Polaroid Frame nghiêng bên trái, Mô tả bên phải -->
-                    <div class="activity-card-wrapper reveal mb-4">
-                        <div class="row align-items-center g-4 g-lg-5">
-
-                            <!-- Cột trái: Khung Polaroid nghiêng góc gắn ảnh -->
-                            <div class="col-lg-5 col-md-6">
-                                <div class="polaroid-photo-frame">
-                                    <div class="photo-pin-badge">
-                                        <i class="bi bi-pin-angle-fill text-danger fs-6"></i>
-                                    </div>
-                                    <img src="img/oml.png" alt="Activity Preview 1"
-                                        class="w-100 rounded-3 object-fit-cover" style="height: 250px;" />
-                                </div>
-                            </div>
-
-                            <!-- Cột phải: Mô tả chi tiết hoạt động -->
-                            <div class="col-lg-7 col-md-6">
-                                <div class="p-2">
-                                    <div class="d-flex align-items-center gap-2 mb-3">
-                                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i
-                                                class="bi bi-calendar3 me-1"></i> 2023 - đến nay</span>
-                                        <span class="activity-role-pill" data-i18n="act1_role"><i
-                                                class="bi bi-award-fill me-1"></i> Vai trò: Thành
-                                            Viên</span>
-                                    </div>
-                                    <h3 class="fw-bold text-dark mb-3" style="font-size: 1.65rem;"
-                                        data-i18n="act1_title">
-                                        Rotaract Club of One Million Lives Saigon (RAC OMLS)
-                                    </h3>
-                                    <div class="activity-desc-wrapper" data-i18n="act1_desc">
-                                        <ul class="activity-desc-list ps-3 mb-0 text-muted">
-                                            <li class="mb-2">Đồng hành tổ chức và triển khai thành công 3 dự án trọng điểm hướng tới cộng đồng: <strong>MilkBank</strong>, <strong>Đập cầu - Gieo sữa</strong>, và <strong>Winter Donation</strong>.</li>
-                                            <li class="mb-2">Lên kế hoạch, điều phối và góp phần vận hành trơn tru các hoạt động thiện nguyện, kết nối nguồn lực để hỗ trợ các hoàn cảnh khó khăn.</li>
-                                            <li>Làm việc nhóm hiệu quả cùng tập thể ban chấp hành và cộng đồng tình nguyện viên nhằm lan tỏa các giá trị nhân văn.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Khung Thẻ Hoạt Động 2: Polaroid Frame nghiêng góc bên trái, Mô tả bên phải -->
-                    <div class="activity-card-wrapper reveal">
-                        <div class="row align-items-center g-4 g-lg-5">
-
-                            <!-- Cột trái: Khung Polaroid nghiêng góc gắn ảnh -->
-                            <div class="col-lg-5 col-md-6">
-                                <div class="polaroid-photo-frame">
-                                    <div class="photo-pin-badge">
-                                        <i class="bi bi-pin-angle-fill text-danger fs-6"></i>
-                                    </div>
-                                    <img src="img/ctvdoankhoa.jpg" alt="Activity Preview 2"
-                                        class="w-100 rounded-3 object-fit-cover" style="height: 250px;" />
-                                </div>
-                            </div>
-
-                            <!-- Cột phải: Mô tả chi tiết hoạt động -->
-                            <div class="col-lg-7 col-md-6">
-                                <div class="p-2">
-                                    <div class="d-flex align-items-center gap-2 mb-3">
-                                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i
-                                                class="bi bi-calendar3 me-1"></i> 2023 - đến nay</span>
-                                        <span class="activity-role-pill" data-i18n="act2_role"><i
-                                                class="bi bi-award-fill me-1"></i> Vai trò: Thành Viên Tham Gia</span>
-                                    </div>
-                                    <h3 class="fw-bold text-dark mb-3" style="font-size: 1.65rem;"
-                                        data-i18n="act2_title">Cộng tác viên thường trực Đoàn Khoa CNTT (Hậu cần)</h3>
-                                    <div class="activity-desc-wrapper" data-i18n="act2_desc">
-                                        <ul class="activity-desc-list ps-3 mb-0 text-muted">
-                                            <li class="mb-2">Hỗ trợ lên kế hoạch, chuẩn bị hậu cần và trực tiếp tham gia tổ chức các sự kiện, phong trào sinh viên cấp khoa (như hội trại, hoạt động chào tân sinh viên, các cuộc thi học thuật).</li>
-                                            <li class="mb-2">Phối hợp nhịp nhàng với Ban Chấp hành Đoàn khoa và các thành viên khác để điều phối chương trình diễn ra suôn sẻ, đúng tiến độ.</li>
-                                            <li>Phát triển kỹ năng làm việc nhóm, quản lý thời gian và giải quyết vấn đề trong môi trường năng động, tập thể.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-
-            <!-- ==========================================================================
-               WAVE DIVIDER (ACTIVITIES -> FOOTER)
-               ========================================================================== -->
-            <div class="wave-divider wave-footer-top">
-                <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="wave-bg-path" opacity="0.35" d="M0 20C320 70 640 15 960 65C1200 85 1340 35 1440 25V200H0Z" fill="var(--wave-fill-orange)" />
-                    <path class="wave-main-path" d="M0 40C360 80 720 20 1080 60C1260 80 1380 40 1440 30V200H0Z" fill="var(--wave-fill-orange)" />
-                </svg>
+            <!-- Tiêu đề "Projects" -->
+            <div class="mb-4 reveal">
+                <h2 class="projects-title" data-i18n="projects_main_title">Projects</h2>
             </div>
 
-            <!-- ==========================================================================
-               FOOTER SECTION (UNIQUE DEV TERMINAL CONTACT SUITE)
-               ========================================================================== -->
-            <!-- ==========================================================================
-               FOOTER SECTION (STUDIO CONTACT SUITE - EXACT MOCKUP)
-               ========================================================================== -->
-            <footer id="footer" class="footer-section">
-                <div class="container position-relative z-2">
-                    
-                    <!-- Header Banner -->
-                    <div id="contact" class="text-center mb-4 reveal">
-                        <div class="d-inline-flex align-items-center gap-2 status-pill-badge mb-2">
-                            <span class="status-dot-white"></span>
-                            <span class="fw-bold extra-small text-uppercase tracking-wider" data-i18n="contact_status">SẮN SÀNG HỢP TÁC & TUYỂN DỤNG</span>
-                        </div>
-                        <h2 class="section-title text-white fw-bold fs-2 mb-2" data-i18n="contact_title">
-                            Khởi Đầu Dự Án Tiếp Theo Cùng Tôi
-                        </h2>
-                        <p class="section-subtitle text-white opacity-90 mx-auto small mb-0" style="max-width: 580px;" data-i18n="contact_subtitle">
-                            Dù bạn có ý tưởng dự án mới, vị trí tuyển dụng tiềm năng hay chỉ muốn kết nối giao lưu — tôi luôn sẵn sàng trò chuyện!
-                        </p>
-                    </div>
+            <!-- Khung dự án chính -->
+            <div class="project-card-wrapper reveal">
+                <div class="row align-items-center g-4 g-lg-5">
 
-                    <!-- Bố cục 2 Cột Độc Đáo -->
-                    <div class="row g-4 g-lg-5 justify-content-center align-items-stretch">
-                        
-                        <!-- Cột Trái: Dev Profile Card & Quick Contact -->
-                        <div class="col-lg-5 reveal">
-                            <div class="dev-profile-contact-card h-100 d-flex flex-column justify-content-between">
-                                
-                                <div>
-                                    <!-- Dev Header -->
-                                    <div class="d-flex align-items-center gap-3 mb-4">
-                                        <div class="dev-avatar-ring">
-                                            <img src="img/thanh2.jpg" alt="Nguyễn Thị Băng Thanh" class="dev-avatar-img">
+                    <!-- Cột trái: Lưới hình ảnh CineZone nghệ thuật dạng Mac Window Browser Mockup -->
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+
+                            <!-- Ảnh chính lớn (Trang chủ CineZone) trong khung Mac Window -->
+                            <div class="col-md-6">
+                                <div class="browser-window-frame h-100">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
                                         </div>
-                                        <div>
-                                            <h4 class="fw-bold text-white mb-1" style="font-size: 1.3rem;">Nguyễn Thị Băng Thanh</h4>
-                                            <span class="badge badge-dev-role px-3 py-1 text-dark fw-bold">.NET & AI Developer</span>
-                                        </div>
+                                        <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/"
+                                            target="_blank"
+                                            class="window-url-badge ms-auto me-auto text-decoration-none"
+                                            title="Truy cập CineZone Website Live">
+                                            <i class="bi bi-lock-fill text-success me-1"></i> cinezone.azurewebsites.net
+                                        </a>
                                     </div>
-
-                                    <!-- Quote -->
-                                    <div class="dev-quote-box mb-4">
-                                        <span class="quote-mark">“</span>
-                                        <p class="dev-quote-text mb-0" data-i18n="contact_dev_quote">
-                                            "Đam mê xây dựng các hệ thống Web & AI hiệu năng cao, tối ưu trải nghiệm người dùng và tư duy lập trình hệ thống sạch."
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Quick Contact Pills -->
-                                <div class="quick-contact-grid mb-4">
-                                    <a href="tel:0375797127" class="quick-contact-pill">
-                                        <div class="pill-icon-circle"><i class="bi bi-telephone-fill"></i></div>
-                                        <div class="pill-info">
-                                            <span class="pill-label" data-i18n="contact_call_label">SỐ ĐIỆN THOẠI / ZALO</span>
-                                            <span class="pill-val">0375 797 127</span>
-                                        </div>
-                                        <i class="bi bi-chevron-right pill-arrow"></i>
-                                    </a>
-
-                                    <a href="mailto:bangthanh.nguyen.it@gmail.com" class="quick-contact-pill">
-                                        <div class="pill-icon-circle"><i class="bi bi-envelope-fill"></i></div>
-                                        <div class="pill-info">
-                                            <span class="pill-label" data-i18n="contact_email_label">EMAIL TRỰC TIẾP</span>
-                                            <span class="pill-val text-break">bangthanh.nguyen.it@gmail.com</span>
-                                        </div>
-                                        <i class="bi bi-chevron-right pill-arrow"></i>
-                                    </a>
-
-                                    <div class="quick-contact-pill no-click">
-                                        <div class="pill-icon-circle"><i class="bi bi-geo-alt-fill"></i></div>
-                                        <div class="pill-info">
-                                            <span class="pill-label" data-i18n="contact_loc_label">KHU VỰC LÀM VIỆC</span>
-                                            <span class="pill-val" data-i18n="contact_loc_val">TP. Hồ Chí Minh, Việt Nam</span>
-                                        </div>
-                                        <div class="pill-check-icon ms-auto"><i class="bi bi-check-lg"></i></div>
-                                    </div>
-                                </div>
-
-                                <!-- Social Links -->
-                                <div class="d-flex align-items-center justify-content-between pt-2">
-                                    <span class="small text-white opacity-90 fw-semibold" data-i18n="contact_social_label">Kết nối với tôi</span>
-                                    <div class="d-flex gap-2">
-                                        <a href="https://github.com/bangthanhnguyenit-web" target="_blank" class="social-circle-btn" title="GitHub"><i class="bi bi-github"></i></a>
-                                        <a href="https://www.linkedin.com/in/bangthanh2109/" target="_blank" class="social-circle-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                        <a href="#" target="_blank" class="social-circle-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+                                    <div class="p-2">
+                                        <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/"
+                                            target="_blank" title="Truy cập CineZone Website Live">
+                                            <img src="img/cinezone-home.png" alt="CineZone Home"
+                                                class="w-100 rounded-3 object-fit-cover" style="height: 335px;" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- 2 Ảnh phụ xếp chồng trong khung Mac Window -->
+                            <div class="col-md-6 d-flex flex-column gap-3">
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/cinezone-theater.png" alt="CineZone Theaters"
+                                            class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/cinezone-admin.png" alt="CineZone Admin"
+                                            class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                    </div>
 
-                        <!-- Cột Phải: Clean Pure White Form Card -->
-                        <div class="col-lg-7 reveal">
-                            <div class="contact-form-card text-start">
-                                
-                                <!-- Header inside White Card -->
-                                <div class="d-flex align-items-center gap-3 mb-4">
-                                    <div class="form-title-badge-icon">
-                                        <i class="bi bi-send-fill"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="fw-bold text-dark mb-0" style="font-size: 1.4rem;" data-i18n="contact_form_title">Gửi tin nhắn cho tôi</h3>
-                                        <p class="text-muted small mb-0" data-i18n="contact_form_sub">Tôi sẽ phản hồi trong thời gian sớm nhất!</p>
+                    <!-- Cột phải: Nội dung mô tả & Accordion chi tiết -->
+                    <div class="col-lg-6">
+                        <div class="p-2 p-lg-3">
+
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="tech-chip chip-orange"><i class="bi bi-code-slash"></i> C# .NET 8.0
+                                    MVC</span>
+                                <span class="tech-chip chip-blue"><i class="bi bi-database"></i> Entity Framework Core &
+                                    SQL Server</span>
+                                <span class="tech-chip chip-green"><i class="bi bi-lightning-charge"></i> SignalR</span>
+                                <span class="tech-chip chip-purple"><i class="bi bi-robot"></i> Gemini AI API</span>
+                                <span class="tech-chip chip-blue"><i class="bi bi-diagram-3"></i> Machine Learning
+                                    (K-Means, KNN, Apriori)</span>
+                                <span class="tech-chip chip-orange"><i class="bi bi-person-bounding-box"></i> Face
+                                    AI</span>
+                                <span class="tech-chip chip-green"><i class="bi bi-credit-card"></i> VietQR, VNPay,
+                                    MoMo</span>
+                                <span class="tech-chip chip-purple"><i class="bi bi-shield-check"></i> JWT / RBAC</span>
+                            </div>
+
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.85rem;" data-i18n="proj1_title">
+                                CINEZONE - Hệ Thống Quản Lý & Đặt Vé Xem Phim
+                            </h3>
+                            <p class="text-muted mb-4 fs-6" data-i18n="proj1_desc">
+                                Nền tảng web toàn diện số hóa quy trình vận hành giữa khách hàng và bộ phận quản
+                                lý rạp chiếu phim, giải quyết bài toán đặt chỗ thời gian thực và tự động hóa
+                                doanh nghiệp.
+                            </p>
+
+                            <!-- Accordion Chi Tiết Tính Năng -->
+                            <div class="accordion custom-accordion mb-4" id="projectAccordion">
+
+                                <!-- Mục 1: Backend -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne"
+                                            data-i18n="proj1_acc1_head">
+                                            <i class="bi bi-hdd-network text-warning me-2 fs-5"></i> Kiến trúc &
+                                            Vận hành Backend
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj1_acc1_body">
+                                            <p class="mb-2">• Phát triển trên nền tảng C# / .NET 8.0 MVC kết hợp
+                                                với Entity Framework Core và SQL Server.</p>
+                                            <p class="mb-2">• Ứng dụng SignalR để đồng bộ hóa dữ liệu thời gian
+                                                thực cho tính năng chọn ghế và chat hỗ trợ.</p>
+                                            <p class="mb-0">• Thiết lập hệ thống bảo mật đa lớp (JWT, Cookie,
+                                                BCrypt) và phân quyền hạt nhân (RBAC) chi tiết.</p>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <!-- Alert Notice -->
-                                <div id="contactFormAlert" class="alert alert-success d-none mb-3 text-start rounded-3 small border-0 shadow-sm" role="alert">
-                                    <i class="bi bi-check-circle-fill me-2 fs-5 align-middle"></i>
-                                    <span id="contactAlertText">Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công.</span>
-                                </div>
-
-                                <form id="portfolioContactForm" autocomplete="off">
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <div class="input-icon-field">
-                                                <i class="bi bi-person-fill field-icon"></i>
-                                                <input type="text" id="contactName" class="form-control custom-input" placeholder="Họ và tên của bạn" autocomplete="off" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-icon-field">
-                                                <i class="bi bi-envelope-fill field-icon"></i>
-                                                <input type="email" id="contactEmail" class="form-control custom-input" placeholder="Email liên hệ" autocomplete="off" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="input-icon-field">
-                                                <i class="bi bi-bookmark-star-fill field-icon"></i>
-                                                <input type="text" id="contactSubject" class="form-control custom-input" placeholder="Chủ đề (Tuyển dụng / Dự án / Hợp tác)" autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="input-icon-field textarea-field">
-                                                <i class="bi bi-chat-left-text-fill field-icon"></i>
-                                                <textarea id="contactMessage" class="form-control custom-input custom-textarea" rows="4" placeholder="Nội dung tin nhắn của bạn..." autocomplete="off" maxlength="1000" required></textarea>
-                                                <span id="charCounter" class="char-counter">0 / 1000</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mt-4">
-                                            <button type="submit" id="contactSubmitBtn" class="btn btn-orange-submit w-100 py-3 rounded-3 fw-bold">
-                                                <i class="bi bi-send-fill me-2"></i> <span data-i18n="contact_btn">GỬI TIN NHẮN TỰ ĐỘNG</span>
-                                            </button>
+                                <!-- Mục 2: AI & ML -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            data-i18n="proj1_acc2_head">
+                                            <i class="bi bi-cpu text-primary me-2 fs-5"></i> Tích hợp AI &
+                                            Machine Learning
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#projectAccordion">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj1_acc2_body">
+                                            <p class="mb-2">• Face AI: Tích hợp nhận diện khuôn mặt tự động chấm công và
+                                                đăng ký nhân viên.</p>
+                                            <p class="mb-2">• Machine Learning (K-Means & KNN): Xây dựng hệ thống gợi ý
+                                                phim cá nhân hóa theo hành vi người dùng.</p>
+                                            <p class="mb-2">• Apriori Algorithm: Khai phá quy luật liên kết để gợi ý
+                                                combo bắp nước tối ưu.</p>
+                                            <p class="mb-0">• Trợ lý ảo AI: Tích hợp Gemini AI API làm chatbot tư vấn
+                                                lịch chiếu 24/7.</p>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
 
-                                <!-- Security Footer Note -->
-                                <div class="text-center mt-3 text-muted extra-small d-flex align-items-center justify-content-center gap-1">
-                                    <i class="bi bi-shield-lock-fill text-muted"></i>
-                                    <span data-i18n="contact_secure">Thông tin của bạn được bảo mật tuyệt đối</span>
+                                <!-- Mục 3: Thanh toán & Quản trị -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            data-i18n="proj1_acc3_head">
+                                            <i class="bi bi-credit-card text-success me-2 fs-5"></i> Thanh toán
+                                            & Tính năng Quản trị
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#projectAccordion">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj1_acc3_body">
+                                            <p class="mb-2">• Tích hợp cổng thanh toán trực tuyến VietQR, VNPay và MoMo
+                                                với cơ chế giữ/hủy chỗ thông minh.</p>
+                                            <p class="mb-2">• Quản lý lịch chiếu chống xung đột, phòng chiếu, mã
+                                                giảm giá (Voucher Condition Engine).</p>
+                                            <p class="mb-0">• Tính lương nhân viên tự động dựa trên bảng công
+                                                tháng và xuất vé điện tử kèm mã QR Code.</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
+
+                            <!-- Footer Card Dự Án 1 -->
+                            <div
+                                class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top">
+                                <span class="fw-bold text-dark small" data-i18n="proj1_role">Vai trò: Backend & AI
+                                    Integration Lead</span>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <a href="https://github.com/bangthanhnguyenit-web/cinezone" target="_blank"
+                                        class="btn btn-dark rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
+                                        <i class="bi bi-github me-1"></i> GitHub
+                                    </a>
+                                    <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/"
+                                        target="_blank"
+                                        class="btn btn-outline-primary rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
+                                        <i class="bi bi-globe me-1"></i> Client Web
+                                    </a>
+                                    <a href="https://cinezone-hyaqg0g4c9fpevag.southeastasia-01.azurewebsites.net/admin/login"
+                                        target="_blank"
+                                        class="btn btn-outline-danger rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
+                                        <i class="bi bi-shield-lock me-1"></i> Admin Portal
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
-
-                    </div>
-
-                    <!-- Bottom Cursive Tagline -->
-                    <div class="text-center my-4 pt-3">
-                        <span class="cursive-tagline">Let's build something amazing together! ✨</span>
                     </div>
 
                 </div>
-            </footer>
+            </div>
 
-            <!-- ==========================================================================
+            <!-- Khung dự án 2 (Bố cục ngược: Mô tả bên trái, Ảnh bên phải) -->
+            <div class="project-card-wrapper reveal mt-5">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Nội dung mô tả & Accordion chi tiết -->
+                    <div class="col-lg-6">
+                        <div class="p-2 p-lg-3">
+
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="tech-chip chip-orange"><i class="bi bi-code-slash"></i> .NET 10 MVC</span>
+                                <span class="tech-chip chip-blue"><i class="bi bi-database"></i> EF Core & SQL
+                                    Server</span>
+                                <span class="tech-chip chip-purple"><i class="bi bi-robot"></i> Gemini AI</span>
+                                <span class="tech-chip chip-green"><i class="bi bi-credit-card"></i> VNPay & MoMo</span>
+                                <span class="tech-chip chip-orange"><i class="bi bi-truck"></i> GHN & Cloudinary</span>
+                            </div>
+
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.85rem;" data-i18n="proj2_title">
+                                MEILING COSMETICS – E-commerce & AI Skincare Platform
+                            </h3>
+                            <p class="text-muted mb-4 fs-6" data-i18n="proj2_desc">
+                                Website thương mại điện tử mỹ phẩm cao cấp kết hợp AI Skincare Assistant và hệ thống đặt
+                                lịch soi da 3D & tư vấn bác sĩ da liễu.
+                            </p>
+
+                            <!-- Accordion Chi Tiết Tính Năng -->
+                            <div class="accordion custom-accordion mb-4" id="projectAccordion2">
+
+                                <!-- Mục 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingProj2One">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseProj2One"
+                                            aria-expanded="false" aria-controls="collapseProj2One"
+                                            data-i18n="proj2_acc1_head">
+                                            <i class="bi bi-bag-check text-warning me-2 fs-5"></i> Thương Mại Điện Tử,
+                                            Thanh Toán & Vận Chuyển
+                                        </button>
+                                    </h2>
+                                    <div id="collapseProj2One" class="accordion-collapse collapse"
+                                        aria-labelledby="headingProj2One" data-bs-parent="#projectAccordion2">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj2_acc1_body">
+                                            <p class="mb-2">• Xây dựng quy trình e-commerce toàn diện: Sản phẩm, giỏ
+                                                hàng, wishlist, voucher giảm giá, đánh giá và đặt hàng hoàn chỉnh.</p>
+                                            <p class="mb-2">• Tích hợp đa dạng phương thức thanh toán trực tuyến: COD,
+                                                VNPay và MoMo với cơ chế xử lý giao dịch an toàn.</p>
+                                            <p class="mb-0">• Tự động hóa vận chuyển: Tích hợp API Giao Hàng Nhanh (GHN)
+                                                để tính phí giao hàng thời gian thực và quản lý đơn hàng.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mục 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingProj2Two">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseProj2Two"
+                                            aria-expanded="false" aria-controls="collapseProj2Two"
+                                            data-i18n="proj2_acc2_head">
+                                            <i class="bi bi-robot text-primary me-2 fs-5"></i> AI Skincare Assistant &
+                                            Phân Tích Da Qua Hình Ảnh
+                                        </button>
+                                    </h2>
+                                    <div id="collapseProj2Two" class="accordion-collapse collapse"
+                                        aria-labelledby="headingProj2Two" data-bs-parent="#projectAccordion2">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj2_acc2_body">
+                                            <p class="mb-2">• AI Chatbot 24/7: Trợ lý AI hỗ trợ tư vấn chăm sóc da, giải
+                                                đáp thắc mắc và tương tác trực tiếp với khách hàng.</p>
+                                            <p class="mb-2">• Phân tích da qua hình ảnh: Ứng dụng Gemini AI API phân
+                                                tích tình trạng da từ ảnh chụp và lưu kết quả vào hồ sơ người dùng.</p>
+                                            <p class="mb-0">• Cá nhân hóa liệu trình: Gợi ý sản phẩm phù hợp từ cửa hàng
+                                                và tự động xây dựng skincare routine tối ưu.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mục 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingProj2Three">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseProj2Three"
+                                            aria-expanded="false" aria-controls="collapseProj2Three"
+                                            data-i18n="proj2_acc3_head">
+                                            <i class="bi bi-calendar-check text-success me-2 fs-5"></i> Đặt Lịch Soi Da
+                                            3D & Admin Dashboard
+                                        </button>
+                                    </h2>
+                                    <div id="collapseProj2Three" class="accordion-collapse collapse"
+                                        aria-labelledby="headingProj2Three" data-bs-parent="#projectAccordion2">
+                                        <div class="accordion-body text-secondary small" data-i18n="proj2_acc3_body">
+                                            <p class="mb-2">• Đặt lịch dịch vụ: Xây dựng quy trình đặt lịch soi da 3D
+                                                VISIA và hẹn tư vấn bác sĩ da liễu cho khách hàng.</p>
+                                            <p class="mb-2">• Quản lý lịch hẹn đồng bộ: Giúp khách hàng và Admin theo
+                                                dõi, điều phối và cập nhật trạng thái lịch hẹn suôn sẻ.</p>
+                                            <p class="mb-0">• Admin Dashboard toàn diện: Quản lý sản phẩm, đơn hàng, tồn
+                                                kho, mã giảm giá, bài viết blog và lịch hẹn.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Footer Card Dự Án 2 -->
+                            <div
+                                class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top">
+                                <span class="fw-bold text-dark small" data-i18n="proj2_role">Vai trò: Fullstack & AI
+                                    Integration Lead</span>
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <a href="#" target="_blank"
+                                        class="btn btn-dark rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
+                                        <i class="bi bi-github me-1"></i> GitHub
+                                    </a>
+                                    <a href="#" target="_blank"
+                                        class="btn btn-outline-primary rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
+                                        <i class="bi bi-globe me-1"></i> Client Web
+                                    </a>
+                                    <a href="#" target="_blank"
+                                        class="btn btn-outline-danger rounded-pill px-3 btn-sm text-decoration-none shadow-sm">
+                                        <i class="bi bi-shield-lock me-1"></i> Admin Portal
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Lưới hình ảnh Project 2 (Lorem) trong khung Mac Window -->
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+
+                            <!-- 2 Ảnh phụ xếp chồng bên trái lưới -->
+                            <div class="col-md-6 d-flex flex-column gap-3">
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/AI.jpg" alt="Lorem Project Preview 1"
+                                            class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                                <div class="browser-window-frame">
+                                    <div class="window-bar">
+                                        <div class="window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2" style="height: 145px;">
+                                        <img src="img/blog.png" alt="Lorem Project Preview 2"
+                                            class="w-100 h-100 rounded-3 object-fit-cover" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ảnh chính lớn bên phải lưới -->
+                            <div class="col-md-6">
+                                <div class="project-img-frame h-100 p-2 bg-white">
+                                    <img src="img/home_mp.png" alt="Lorem Project Main Preview"
+                                        class="w-100 rounded-3 object-fit-cover" style="height: 380px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION HOẠT ĐỘNG & NGOẠI KHÓA (ACTIVITIES)
+       ========================================================================== -->
+    <section id="activities" class="activities-section container-fluid px-4">
+        <div class="container">
+
+            <!-- Tiêu đề "Hoạt Động & Ngoại Khóa" -->
+            <div class="text-center mb-3 reveal">
+                <span class="activity-section-badge" data-i18n="activities_badge"><i class="bi bi-people-fill me-1"></i>
+                    Hoạt Động Ngoại Khóa</span>
+                <h2 class="section-title text-dark mt-2" data-i18n="activities_title">Hoạt Động & Sự Kiện</h2>
+                <p class="section-subtitle text-muted" data-i18n="activities_subtitle">Các hoạt động phong trào,
+                    sự kiện học thuật và dự án cộng đồng đã tham gia</p>
+            </div>
+
+            <!-- Khung Thẻ Hoạt Động 1: Polaroid Frame nghiêng bên trái, Mô tả bên phải -->
+            <div class="activity-card-wrapper reveal mb-4">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Khung Polaroid nghiêng góc gắn ảnh -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="polaroid-photo-frame">
+                            <div class="photo-pin-badge">
+                                <i class="bi bi-pin-angle-fill text-danger fs-6"></i>
+                            </div>
+                            <img src="img/oml.png" alt="Activity Preview 1" class="w-100 rounded-3 object-fit-cover"
+                                style="height: 250px;" />
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Mô tả chi tiết hoạt động -->
+                    <div class="col-lg-7 col-md-6">
+                        <div class="p-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i
+                                        class="bi bi-calendar3 me-1"></i> 2023 - đến nay</span>
+                                <span class="activity-role-pill" data-i18n="act1_role"><i
+                                        class="bi bi-award-fill me-1"></i> Vai trò: Thành
+                                    Viên</span>
+                            </div>
+                            <h3 class="fw-bold text-dark mb-3" style="font-size: 1.65rem;" data-i18n="act1_title">
+                                Rotaract Club of One Million Lives Saigon (RAC OMLS)
+                            </h3>
+                            <div class="activity-desc-wrapper" data-i18n="act1_desc">
+                                <ul class="activity-desc-list ps-3 mb-0 text-muted">
+                                    <li class="mb-2">Đồng hành tổ chức và triển khai thành công 3 dự án trọng điểm hướng
+                                        tới cộng đồng: <strong>MilkBank</strong>, <strong>Đập cầu - Gieo sữa</strong>,
+                                        và <strong>Winter Donation</strong>.</li>
+                                    <li class="mb-2">Lên kế hoạch, điều phối và góp phần vận hành trơn tru các hoạt động
+                                        thiện nguyện, kết nối nguồn lực để hỗ trợ các hoàn cảnh khó khăn.</li>
+                                    <li>Làm việc nhóm hiệu quả cùng tập thể ban chấp hành và cộng đồng tình nguyện viên
+                                        nhằm lan tỏa các giá trị nhân văn.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Khung Thẻ Hoạt Động 2: Polaroid Frame nghiêng góc bên trái, Mô tả bên phải -->
+            <div class="activity-card-wrapper reveal">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Cột trái: Khung Polaroid nghiêng góc gắn ảnh -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="polaroid-photo-frame">
+                            <div class="photo-pin-badge">
+                                <i class="bi bi-pin-angle-fill text-danger fs-6"></i>
+                            </div>
+                            <img src="img/ctvdoankhoa.jpg" alt="Activity Preview 2"
+                                class="w-100 rounded-3 object-fit-cover" style="height: 250px;" />
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Mô tả chi tiết hoạt động -->
+                    <div class="col-lg-7 col-md-6">
+                        <div class="p-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i
+                                        class="bi bi-calendar3 me-1"></i> 2023 - đến nay</span>
+                                <span class="activity-role-pill" data-i18n="act2_role"><i
+                                        class="bi bi-award-fill me-1"></i> Vai trò: Thành Viên Tham Gia</span>
+                            </div>
+                            <h3 class="fw-bold text-dark mb-3" style="font-size: 1.65rem;" data-i18n="act2_title">Cộng
+                                tác viên thường trực Đoàn Khoa CNTT (Hậu cần)</h3>
+                            <div class="activity-desc-wrapper" data-i18n="act2_desc">
+                                <ul class="activity-desc-list ps-3 mb-0 text-muted">
+                                    <li class="mb-2">Hỗ trợ lên kế hoạch, chuẩn bị hậu cần và trực tiếp tham gia tổ chức
+                                        các sự kiện, phong trào sinh viên cấp khoa (như hội trại, hoạt động chào tân
+                                        sinh viên, các cuộc thi học thuật).</li>
+                                    <li class="mb-2">Phối hợp nhịp nhàng với Ban Chấp hành Đoàn khoa và các thành viên
+                                        khác để điều phối chương trình diễn ra suôn sẻ, đúng tiến độ.</li>
+                                    <li>Phát triển kỹ năng làm việc nhóm, quản lý thời gian và giải quyết vấn đề trong
+                                        môi trường năng động, tập thể.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+               WAVE DIVIDER (ACTIVITIES -> FOOTER)
+               ========================================================================== -->
+    <div class="wave-divider wave-footer-top">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="wave-bg-path" opacity="0.35" d="M0 20C320 70 640 15 960 65C1200 85 1340 35 1440 25V200H0Z"
+                fill="var(--wave-fill-orange)" />
+            <path class="wave-main-path" d="M0 40C360 80 720 20 1080 60C1260 80 1380 40 1440 30V200H0Z"
+                fill="var(--wave-fill-orange)" />
+        </svg>
+    </div>
+
+    <!-- ==========================================================================
+               FOOTER SECTION (UNIQUE DEV TERMINAL CONTACT SUITE)
+               ========================================================================== -->
+    <!-- ==========================================================================
+               FOOTER SECTION (STUDIO CONTACT SUITE - EXACT MOCKUP)
+               ========================================================================== -->
+    <footer id="footer" class="footer-section">
+        <div class="container position-relative z-2">
+
+            <!-- Header Banner -->
+            <div id="contact" class="text-center mb-4 reveal">
+                <div class="d-inline-flex align-items-center gap-2 status-pill-badge mb-2">
+                    <span class="status-dot-white"></span>
+                    <span class="fw-bold extra-small text-uppercase tracking-wider" data-i18n="contact_status">SẮN SÀNG
+                        HỢP TÁC & TUYỂN DỤNG</span>
+                </div>
+                <h2 class="section-title text-white fw-bold fs-2 mb-2" data-i18n="contact_title">
+                    Khởi Đầu Dự Án Tiếp Theo Cùng Tôi
+                </h2>
+                <p class="section-subtitle text-white opacity-90 mx-auto small mb-0" style="max-width: 580px;"
+                    data-i18n="contact_subtitle">
+                    Dù bạn có ý tưởng dự án mới, vị trí tuyển dụng tiềm năng hay chỉ muốn kết nối giao lưu — tôi luôn
+                    sẵn sàng trò chuyện!
+                </p>
+            </div>
+
+            <!-- Bố cục 2 Cột Độc Đáo -->
+            <div class="row g-4 g-lg-5 justify-content-center align-items-stretch">
+
+                <!-- Cột Trái: Dev Profile Card & Quick Contact -->
+                <div class="col-lg-5 reveal">
+                    <div class="dev-profile-contact-card h-100 d-flex flex-column justify-content-between">
+
+                        <div>
+                            <!-- Dev Header -->
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="dev-avatar-ring">
+                                    <img src="img/thanh2.jpg" alt="Nguyễn Thị Băng Thanh" class="dev-avatar-img">
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold text-white mb-1" style="font-size: 1.3rem;">Nguyễn Thị Băng Thanh
+                                    </h4>
+                                    <span class="badge badge-dev-role px-3 py-1 text-dark fw-bold">.NET & AI
+                                        Developer</span>
+                                </div>
+                            </div>
+
+                            <!-- Quote -->
+                            <div class="dev-quote-box mb-4">
+                                <span class="quote-mark">“</span>
+                                <p class="dev-quote-text mb-0" data-i18n="contact_dev_quote">
+                                    "Đam mê xây dựng các hệ thống Web & AI hiệu năng cao, tối ưu trải nghiệm người dùng
+                                    và tư duy lập trình hệ thống sạch."
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Contact Pills -->
+                        <div class="quick-contact-grid mb-4">
+                            <a href="tel:0375797127" class="quick-contact-pill">
+                                <div class="pill-icon-circle"><i class="bi bi-telephone-fill"></i></div>
+                                <div class="pill-info">
+                                    <span class="pill-label" data-i18n="contact_call_label">SỐ ĐIỆN THOẠI / ZALO</span>
+                                    <span class="pill-val">0375 797 127</span>
+                                </div>
+                                <i class="bi bi-chevron-right pill-arrow"></i>
+                            </a>
+
+                            <a href="mailto:bangthanh.nguyen.it@gmail.com" class="quick-contact-pill">
+                                <div class="pill-icon-circle"><i class="bi bi-envelope-fill"></i></div>
+                                <div class="pill-info">
+                                    <span class="pill-label" data-i18n="contact_email_label">EMAIL TRỰC TIẾP</span>
+                                    <span class="pill-val text-break">bangthanh.nguyen.it@gmail.com</span>
+                                </div>
+                                <i class="bi bi-chevron-right pill-arrow"></i>
+                            </a>
+
+                            <div class="quick-contact-pill no-click">
+                                <div class="pill-icon-circle"><i class="bi bi-geo-alt-fill"></i></div>
+                                <div class="pill-info">
+                                    <span class="pill-label" data-i18n="contact_loc_label">KHU VỰC LÀM VIỆC</span>
+                                    <span class="pill-val" data-i18n="contact_loc_val">TP. Hồ Chí Minh, Việt Nam</span>
+                                </div>
+                                <div class="pill-check-icon ms-auto"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="d-flex align-items-center justify-content-between pt-2">
+                            <span class="small text-white opacity-90 fw-semibold" data-i18n="contact_social_label">Kết
+                                nối với tôi</span>
+                            <div class="d-flex gap-2">
+                                <a href="https://github.com/bangthanhnguyenit-web" target="_blank"
+                                    class="social-circle-btn" title="GitHub"><i class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/bangthanh2109/" target="_blank"
+                                    class="social-circle-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" target="_blank" class="social-circle-btn" title="Facebook"><i
+                                        class="bi bi-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột Phải: Clean Pure White Form Card -->
+                <div class="col-lg-7 reveal">
+                    <div class="contact-form-card text-start">
+
+                        <!-- Header inside White Card -->
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="form-title-badge-icon">
+                                <i class="bi bi-send-fill"></i>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold text-dark mb-0" style="font-size: 1.4rem;"
+                                    data-i18n="contact_form_title">Gửi tin nhắn cho tôi</h3>
+                                <p class="text-muted small mb-0" data-i18n="contact_form_sub">Tôi sẽ phản hồi trong thời
+                                    gian sớm nhất!</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert Notice -->
+                        <div id="contactFormAlert"
+                            class="alert alert-success d-none mb-3 text-start rounded-3 small border-0 shadow-sm"
+                            role="alert">
+                            <i class="bi bi-check-circle-fill me-2 fs-5 align-middle"></i>
+                            <span id="contactAlertText">Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công.</span>
+                        </div>
+
+                        <form id="portfolioContactForm" autocomplete="off">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="input-icon-field">
+                                        <i class="bi bi-person-fill field-icon"></i>
+                                        <input type="text" id="contactName" class="form-control custom-input"
+                                            placeholder="Họ và tên của bạn" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-icon-field">
+                                        <i class="bi bi-envelope-fill field-icon"></i>
+                                        <input type="email" id="contactEmail" class="form-control custom-input"
+                                            placeholder="Email liên hệ" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-icon-field">
+                                        <i class="bi bi-bookmark-star-fill field-icon"></i>
+                                        <input type="text" id="contactSubject" class="form-control custom-input"
+                                            placeholder="Chủ đề (Tuyển dụng / Dự án / Hợp tác)" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-icon-field textarea-field">
+                                        <i class="bi bi-chat-left-text-fill field-icon"></i>
+                                        <textarea id="contactMessage" class="form-control custom-input custom-textarea"
+                                            rows="4" placeholder="Nội dung tin nhắn của bạn..." autocomplete="off"
+                                            maxlength="1000" required></textarea>
+                                        <span id="charCounter" class="char-counter">0 / 1000</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" id="contactSubmitBtn"
+                                        class="btn btn-orange-submit w-100 py-3 rounded-3 fw-bold">
+                                        <i class="bi bi-send-fill me-2"></i> <span data-i18n="contact_btn">GỬI TIN NHẮN
+                                            TỰ ĐỘNG</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Security Footer Note -->
+                        <div
+                            class="text-center mt-3 text-muted extra-small d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-shield-lock-fill text-muted"></i>
+                            <span data-i18n="contact_secure">Thông tin của bạn được bảo mật tuyệt đối</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Cursive Tagline -->
+            <div class="text-center my-4 pt-3">
+                <span class="cursive-tagline">Let's build something amazing together! ✨</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       POPUP XEM TRƯỚC CV (BANGTHANH.pdf) VÀ XÁC NHẬN TẢI XUỐNG
+       ========================================================================== -->
+    <div class="modal fade cv-modal" id="cvPreviewModal" tabindex="-1" aria-labelledby="cvPreviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content cv-modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header cv-modal-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="cv-modal-badge">
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+                        </div>
+                        <div>
+                            <h5 class="modal-title cv-modal-title mb-0" id="cvPreviewModalLabel" data-i18n="cv_modal_title">
+                                Xem trước CV - Băng Thanh
+                            </h5>
+                            <span class="cv-modal-subtitle text-muted small" data-i18n="cv_modal_subtitle">
+                                Tài liệu: BANGTHANH.pdf
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="BANGTHANH.pdf" target="_blank" class="btn btn-sm btn-outline-secondary rounded-pill d-none d-sm-inline-flex align-items-center gap-1" title="Mở trong tab mới" data-i18n="cv_modal_open_tab">
+                            <i class="bi bi-box-arrow-up-right me-1"></i> Mở tab mới
+                        </a>
+                        <button type="button" class="btn-close cv-btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+
+                <!-- Modal Body (Preview Viewer & Confirm Overlay) -->
+                <div class="modal-body cv-modal-body p-0 position-relative">
+                    <div class="cv-preview-wrapper" id="cvPreviewWrapper">
+                        <iframe src="BANGTHANH.pdf#view=FitH" class="cv-pdf-frame" id="cvPdfFrame" title="CV BANGTHANH Preview">
+                            <div class="p-4 text-center text-white">
+                                <p>Trình duyệt không hỗ trợ xem trước PDF trực tiếp.</p>
+                                <a href="BANGTHANH.pdf" target="_blank" class="btn btn-primary-orange">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i> Xem file PDF
+                                </a>
+                            </div>
+                        </iframe>
+                    </div>
+
+                    <!-- Overlay Thông báo xác nhận: "Bạn có muốn tải CV này không?" -->
+                    <div class="cv-confirm-overlay d-none" id="cvConfirmOverlay">
+                        <div class="cv-confirm-card" id="cvConfirmCard">
+                            <div class="cv-confirm-icon-wrap">
+                                <i class="bi bi-question-circle-fill"></i>
+                            </div>
+                            <h4 class="cv-confirm-title" data-i18n="cv_confirm_title">Xác nhận tải CV</h4>
+                            <p class="cv-confirm-text mb-3" data-i18n="cv_confirm_question">
+                                Bạn có muốn tải CV này không?
+                            </p>
+                            <div class="cv-file-info-badge mb-4">
+                                <i class="bi bi-file-earmark-pdf-fill text-danger me-2 fs-5"></i>
+                                <span class="fw-bold">BANGTHANH.pdf</span>
+                                <span class="badge bg-light text-secondary border ms-2">PDF Document</span>
+                            </div>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button type="button" class="btn btn-secondary rounded-pill px-4 py-2" id="btnCancelCvDownload" data-i18n="cv_confirm_cancel">
+                                    Không
+                                </button>
+                                <button type="button" class="btn btn-download-confirm rounded-pill px-4 py-2" id="btnConfirmCvDownload" data-i18n="cv_confirm_accept">
+                                    <i class="bi bi-download me-1"></i> Đồng ý tải
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toast thông báo đang tải xuống -->
+                    <div class="cv-download-toast d-none" id="cvDownloadToast">
+                        <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+                        <span data-i18n="cv_downloading_msg">Đang bắt đầu tải xuống CV BANGTHANH.pdf...</span>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer cv-modal-footer d-flex justify-content-between align-items-center">
+                    <div class="cv-meta-info text-muted small d-none d-md-flex align-items-center gap-3">
+                        <span data-i18n="cv_modal_meta_update"><i class="bi bi-check2-circle text-success me-1"></i> Bản cập nhật mới nhất</span>
+                        <span data-i18n="cv_modal_meta_format"><i class="bi bi-filetype-pdf text-danger me-1"></i> Định dạng PDF</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                        <button type="button" class="btn btn-outline-secondary cv-btn-dismiss rounded-pill px-4" data-bs-dismiss="modal" data-i18n="cv_modal_close">
+                            Đóng
+                        </button>
+                        <button type="button" class="btn-download-cv-action" id="btnTriggerCvDownload" data-i18n="cv_modal_download_btn">
+                            <i class="bi bi-download me-1"></i> Tải CV
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
        SCROLL TO TOP BUTTON
        ========================================================================== -->
-            <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Cuộn lên đầu trang" title="Cuộn lên đầu trang">
-                <i class="bi bi-arrow-up"></i>
-            </button>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Cuộn lên đầu trang" title="Cuộn lên đầu trang">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
-            <!-- Bootstrap JS Bundle (Cần thiết để chạy tính năng Accordion) -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle (Cần thiết để chạy tính năng Accordion) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Script Quản Lý Đa Ngôn Ngữ (VI / EN) -->
-            <script src="js/i18n.js"></script>
+    <!-- Script Quản Lý Đa Ngôn Ngữ (VI / EN) -->
+    <script src="js/i18n.js"></script>
 
-            <!-- JavaScript tích hợp xử lý hiệu ứng cuộn, nút Scroll to Top & Form Liên Hệ Tự Động -->
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    // 1. Xử lý nút Scroll to Top
-                    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    <!-- JavaScript tích hợp xử lý hiệu ứng cuộn, nút Scroll to Top & Form Liên Hệ Tự Động -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Xử lý nút Scroll to Top
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-                    if (scrollTopBtn) {
-                        window.addEventListener("scroll", function () {
-                            if (window.scrollY > 300) {
-                                scrollTopBtn.classList.add("show");
-                            } else {
-                                scrollTopBtn.classList.remove("show");
-                            }
-                        });
-
-                        scrollTopBtn.addEventListener("click", function () {
-                            window.scrollTo({
-                                top: 0,
-                                behavior: "smooth"
-                            });
-                        });
-                    }
-
-                    // 2. Hiệu ứng Reveal on Scroll (Hiện dần khi cuộn trang)
-                    const revealElements = document.querySelectorAll(".reveal");
-
-                    function checkReveal() {
-                        const triggerBottom = window.innerHeight * 0.85;
-
-                        revealElements.forEach(function (el) {
-                            const boxTop = el.getBoundingClientRect().top;
-                            if (boxTop < triggerBottom) {
-                                el.classList.add("active");
-                            }
-                        });
-                    }
-
-                    window.addEventListener("scroll", checkReveal);
-                    checkReveal();
-
-                    // 3. Xử lý Form Liên Hệ Tự Động Gửi Trực Tiếp Về Gmail (FormSubmit API)
-                    const contactForm = document.getElementById("portfolioContactForm");
-                    const contactAlert = document.getElementById("contactFormAlert");
-                    const contactAlertText = document.getElementById("contactAlertText");
-                    const submitBtn = document.getElementById("contactSubmitBtn");
-
-                    if (contactForm) {
-                        contactForm.addEventListener("submit", function (e) {
-                            e.preventDefault();
-
-                            const name = document.getElementById("contactName").value.trim();
-                            const email = document.getElementById("contactEmail").value.trim();
-                            const subject = document.getElementById("contactSubject").value.trim();
-                            const message = document.getElementById("contactMessage").value.trim();
-
-                            if (!name || !email || !message) return;
-
-                            const originalBtnContent = submitBtn.innerHTML;
-                            submitBtn.disabled = true;
-                            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> Đang gửi tin nhắn về Gmail...';
-
-                            fetch("https://formsubmit.co/ajax/bangthanh.nguyen.it@gmail.com", {
-                                method: "POST",
-                                headers: { 
-                                    'Content-Type': 'application/json',
-                                    'Accept': 'application/json'
-                                },
-                                body: JSON.stringify({
-                                    "Họ tên người gửi": name,
-                                    "Email người gửi": email,
-                                    "_subject": subject || ("Liên hệ mới từ Portfolio - " + name),
-                                    "Nội dung tin nhắn": message,
-                                    "_honey": ""
-                                })
-                            })
-                            .then(response => response.json())
-                            .then(data => {
-                                if (contactAlert && contactAlertText) {
-                                    contactAlertText.innerHTML = '<strong>Cảm ơn ' + name + '!</strong> Tin nhắn của bạn đã được gửi trực tiếp đến hộp thư Gmail của Băng Thanh. Băng Thanh sẽ phản hồi qua email (' + email + ') sớm nhất!';
-                                    contactAlert.classList.remove("d-none", "alert-danger");
-                                    contactAlert.classList.add("alert-success", "fade", "show");
-                                    contactAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                }
-                                contactForm.reset();
-                                if (charCounter) charCounter.textContent = "0 / 1000";
-                            })
-                            .catch(error => {
-                                console.error("FormSubmit Error:", error);
-                                if (contactAlert && contactAlertText) {
-                                    contactAlertText.innerHTML = '<strong>Cảm ơn ' + name + '!</strong> Tin nhắn đã được chuẩn bị. Đang chuyển hướng sang ứng dụng Mail...';
-                                    contactAlert.classList.remove("d-none", "alert-danger");
-                                    contactAlert.classList.add("alert-success", "fade", "show");
-                                }
-                                const mailtoLink = 'mailto:bangthanh.nguyen.it@gmail.com?subject=' + encodeURIComponent(subject || 'Liên hệ từ Portfolio - ' + name) + '&body=' + encodeURIComponent('Họ tên: ' + name + '\nEmail: ' + email + '\n\nNội dung:\n' + message);
-                                window.location.href = mailtoLink;
-                            })
-                            .finally(() => {
-                                submitBtn.disabled = false;
-                                submitBtn.innerHTML = originalBtnContent;
-                            });
-                        });
-                    }
-
-                    // 4. Xử lý Đếm số ký tự cho Textarea (Character Counter)
-                    const contactMsgInput = document.getElementById("contactMessage");
-                    const charCounterEl = document.getElementById("charCounter");
-                    if (contactMsgInput && charCounterEl) {
-                        contactMsgInput.addEventListener("input", function () {
-                            charCounterEl.textContent = this.value.length + " / 1000";
-                        });
+            if (scrollTopBtn) {
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > 300) {
+                        scrollTopBtn.classList.add("show");
+                    } else {
+                        scrollTopBtn.classList.remove("show");
                     }
                 });
-            </script>
+
+                scrollTopBtn.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            }
+
+            // 2. Hiệu ứng Reveal on Scroll (Hiện dần khi cuộn trang)
+            const revealElements = document.querySelectorAll(".reveal");
+
+            function checkReveal() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                revealElements.forEach(function (el) {
+                    const boxTop = el.getBoundingClientRect().top;
+                    if (boxTop < triggerBottom) {
+                        el.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkReveal);
+            checkReveal();
+
+            // 3. Xử lý Form Liên Hệ Tự Động Gửi Trực Tiếp Về Gmail (FormSubmit API)
+            const contactForm = document.getElementById("portfolioContactForm");
+            const contactAlert = document.getElementById("contactFormAlert");
+            const contactAlertText = document.getElementById("contactAlertText");
+            const submitBtn = document.getElementById("contactSubmitBtn");
+
+            if (contactForm) {
+                contactForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById("contactName").value.trim();
+                    const email = document.getElementById("contactEmail").value.trim();
+                    const subject = document.getElementById("contactSubject").value.trim();
+                    const message = document.getElementById("contactMessage").value.trim();
+
+                    if (!name || !email || !message) return;
+
+                    const originalBtnContent = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> Đang gửi tin nhắn về Gmail...';
+
+                    fetch("https://formsubmit.co/ajax/bangthanh.nguyen.it@gmail.com", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "Họ tên người gửi": name,
+                            "Email người gửi": email,
+                            "_subject": subject || ("Liên hệ mới từ Portfolio - " + name),
+                            "Nội dung tin nhắn": message,
+                            "_honey": ""
+                        })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (contactAlert && contactAlertText) {
+                                contactAlertText.innerHTML = '<strong>Cảm ơn ' + name + '!</strong> Tin nhắn của bạn đã được gửi trực tiếp đến hộp thư Gmail của Băng Thanh. Băng Thanh sẽ phản hồi qua email (' + email + ') sớm nhất!';
+                                contactAlert.classList.remove("d-none", "alert-danger");
+                                contactAlert.classList.add("alert-success", "fade", "show");
+                                contactAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                            contactForm.reset();
+                            if (charCounter) charCounter.textContent = "0 / 1000";
+                        })
+                        .catch(error => {
+                            console.error("FormSubmit Error:", error);
+                            if (contactAlert && contactAlertText) {
+                                contactAlertText.innerHTML = '<strong>Cảm ơn ' + name + '!</strong> Tin nhắn đã được chuẩn bị. Đang chuyển hướng sang ứng dụng Mail...';
+                                contactAlert.classList.remove("d-none", "alert-danger");
+                                contactAlert.classList.add("alert-success", "fade", "show");
+                            }
+                            const mailtoLink = 'mailto:bangthanh.nguyen.it@gmail.com?subject=' + encodeURIComponent(subject || 'Liên hệ từ Portfolio - ' + name) + '&body=' + encodeURIComponent('Họ tên: ' + name + '\nEmail: ' + email + '\n\nNội dung:\n' + message);
+                            window.location.href = mailtoLink;
+                        })
+                        .finally(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnContent;
+                        });
+                });
+            }
+
+            // 4. Xử lý Đếm số ký tự cho Textarea (Character Counter)
+            const contactMsgInput = document.getElementById("contactMessage");
+            const charCounterEl = document.getElementById("charCounter");
+            if (contactMsgInput && charCounterEl) {
+                contactMsgInput.addEventListener("input", function () {
+                    charCounterEl.textContent = this.value.length + " / 1000";
+                });
+            }
+
+            // 5. Xử lý Popup xem trước CV (BANGTHANH.pdf) & Thông báo xác nhận tải CV
+            const cvModalEl = document.getElementById("cvPreviewModal");
+            const btnTriggerCvDownload = document.getElementById("btnTriggerCvDownload");
+            const cvConfirmOverlay = document.getElementById("cvConfirmOverlay");
+            const cvConfirmCard = document.getElementById("cvConfirmCard");
+            const btnCancelCvDownload = document.getElementById("btnCancelCvDownload");
+            const btnConfirmCvDownload = document.getElementById("btnConfirmCvDownload");
+            const cvDownloadToast = document.getElementById("cvDownloadToast");
+
+            // Hàm thực hiện tải file CV
+            function triggerCvFileDownload() {
+                const link = document.createElement("a");
+                link.href = "BANGTHANH.pdf";
+                link.download = "BANGTHANH.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            // Bấm nút Tải CV trong modal -> Hiển thị thông báo xác nhận: "Bạn có muốn tải CV này không?"
+            if (btnTriggerCvDownload && cvConfirmOverlay) {
+                btnTriggerCvDownload.addEventListener("click", function () {
+                    cvConfirmOverlay.classList.remove("d-none");
+                });
+            }
+
+            // Bấm "Không" -> Đóng bảng xác nhận
+            if (btnCancelCvDownload && cvConfirmOverlay) {
+                btnCancelCvDownload.addEventListener("click", function () {
+                    cvConfirmOverlay.classList.add("d-none");
+                });
+            }
+
+            // Click ra ngoài thẻ xác nhận -> Đóng bảng xác nhận
+            if (cvConfirmOverlay && cvConfirmCard) {
+                cvConfirmOverlay.addEventListener("click", function (e) {
+                    if (!cvConfirmCard.contains(e.target)) {
+                        cvConfirmOverlay.classList.add("d-none");
+                    }
+                });
+            }
+
+            // Bấm "Đồng ý tải" -> Tải file CV & Hiện thông báo thành công
+            if (btnConfirmCvDownload) {
+                btnConfirmCvDownload.addEventListener("click", function () {
+                    if (cvConfirmOverlay) {
+                        cvConfirmOverlay.classList.add("d-none");
+                    }
+                    triggerCvFileDownload();
+
+                    // Hiển thị toast thông báo
+                    if (cvDownloadToast) {
+                        cvDownloadToast.classList.remove("d-none");
+                        setTimeout(function () {
+                            cvDownloadToast.classList.add("d-none");
+                        }, 3500);
+                    }
+                });
+            }
+
+            // Reset trạng thái xác nhận khi đóng modal
+            if (cvModalEl) {
+                cvModalEl.addEventListener("hidden.bs.modal", function () {
+                    if (cvConfirmOverlay) cvConfirmOverlay.classList.add("d-none");
+                    if (cvDownloadToast) cvDownloadToast.classList.add("d-none");
+                });
+            }
+
+            // Đảm bảo đóng menu mobile khi bấm xem CV trên Navbar
+            document.querySelectorAll('[data-bs-target="#cvPreviewModal"]').forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    const floatingNavbarNav = document.getElementById("floatingNavbarNav");
+                    if (floatingNavbarNav && floatingNavbarNav.classList.contains("show")) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(floatingNavbarNav) || new bootstrap.Collapse(floatingNavbarNav);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

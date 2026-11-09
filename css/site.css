@@ -122,6 +122,9 @@ body {
     box-shadow: 0 4px 15px rgba(250, 125, 43, 0.3);
     transition: var(--transition-smooth);
     white-space: nowrap;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .btn-download-cv:hover {
@@ -1414,4 +1417,303 @@ body {
     color: var(--primary-orange);
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   CV PREVIEW MODAL & DOWNLOAD CONFIRMATION STYLES
+   ========================================================================== */
+.btn-hero-cv-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 1.02rem;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-hero-cv-cta:hover {
+    background: #FFFFFF;
+    color: var(--primary-orange-dark);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.cv-modal .modal-dialog {
+    max-width: 960px;
+    margin: 1.5rem auto;
+}
+
+.cv-modal-content {
+    border-radius: 24px;
+    border: 1px solid rgba(250, 125, 43, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.cv-modal-header {
+    background: linear-gradient(135deg, #FFF7F2 0%, #FFEFE5 100%);
+    border-bottom: 1px solid rgba(250, 125, 43, 0.15);
+    padding: 1.1rem 1.5rem;
+}
+
+.cv-modal-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(220, 53, 69, 0.12);
+    color: #DC3545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    flex-shrink: 0;
+}
+
+.cv-modal-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+}
+
+.cv-btn-close {
+    border-radius: 50%;
+    padding: 0.6rem;
+    transition: var(--transition-smooth);
+}
+
+.cv-btn-close:hover {
+    transform: rotate(90deg);
+}
+
+.cv-modal-body {
+    background: #474B4E;
+    height: 72vh;
+    min-height: 520px;
+    max-height: 780px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-preview-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.cv-pdf-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Modal Footer */
+.cv-modal-footer {
+    background: #FFFFFF;
+    border-top: 1px solid #EFEFEF;
+    padding: 0.95rem 1.5rem;
+}
+
+.btn-download-cv-action {
+    background: var(--primary-orange);
+    color: #FFFFFF !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.75rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(250, 125, 43, 0.35);
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-download-cv-action:hover {
+    background: var(--primary-orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 125, 43, 0.5);
+    color: #FFFFFF !important;
+}
+
+.cv-btn-dismiss {
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.55rem 1.35rem;
+    transition: var(--transition-smooth);
+}
+
+/* --------------------------------------------------------------------------
+   CONFIRMATION OVERLAY (THÔNG BÁO XÁC NHẬN "BẠN CÓ MUỐN TẢI CV NÀY KHÔNG?")
+   -------------------------------------------------------------------------- */
+.cv-confirm-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1060;
+    padding: 1.5rem;
+    animation: cvFadeIn 0.25s ease-out;
+}
+
+.cv-confirm-card {
+    background: #FFFFFF;
+    border-radius: 22px;
+    padding: 2.2rem 2.4rem;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(250, 125, 43, 0.25);
+    animation: cvScaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-confirm-icon-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(250, 125, 43, 0.12);
+    color: var(--primary-orange);
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    animation: cvPulseIcon 2s infinite ease-in-out;
+}
+
+.cv-confirm-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.cv-confirm-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2D3748;
+    line-height: 1.5;
+}
+
+.cv-file-info-badge {
+    background: #F8FAFC;
+    border: 1px dashed #CBD5E1;
+    border-radius: 14px;
+    padding: 0.65rem 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.92rem;
+}
+
+.btn-download-confirm {
+    background: var(--primary-orange);
+    color: #FFFFFF !important;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 4px 15px rgba(250, 125, 43, 0.35);
+    transition: var(--transition-smooth);
+}
+
+.btn-download-confirm:hover {
+    background: var(--primary-orange-dark);
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(250, 125, 43, 0.5);
+}
+
+/* Toast thông báo tải CV */
+.cv-download-toast {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #198754;
+    color: #FFFFFF;
+    padding: 0.85rem 1.75rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-size: 0.95rem;
+    font-weight: 600;
+    z-index: 1070;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: cvSlideUp 0.35s ease-out;
+}
+
+@keyframes cvFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes cvScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes cvSlideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 25px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes cvPulseIcon {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .cv-modal .modal-dialog {
+        margin: 0.65rem;
+    }
+    .cv-modal-body {
+        height: 65vh;
+        min-height: 420px;
+    }
+    .cv-confirm-card {
+        padding: 1.6rem 1.25rem;
+    }
+    .cv-confirm-text {
+        font-size: 1rem;
+    }
+    .cv-download-toast {
+        white-space: normal;
+        max-width: 90%;
+        text-align: center;
+    }
 }

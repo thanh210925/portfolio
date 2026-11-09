@@ -22,13 +22,13 @@ const translations = {
         // Skills Section
         "skills_title": "Kỹ Năng Cốt Lõi",
         "skills_subtitle": "Bộ công cụ giúp mình xây dựng các hệ thống web tối ưu",
-        "skill1_title": "Backend & Server",
-        "skill1_desc": "Tư duy logic hệ thống chặt chẽ, áp dụng kiến trúc MVC để xử lý luồng dữ liệu an toàn.",
+        "skill1_title": "Backend & Database",
+        "skill1_desc": "Tư duy logic hệ thống chặt chẽ, kiến trúc backend vững chắc và quản trị dữ liệu an toàn.",
         "skill2_title": "Giao Diện (UI)",
         "skill2_desc": "Xây dựng giao diện responsive, mượt mà và thân thiện với trải nghiệm người dùng.",
-        "skill3_title": "Công Cụ & Khác",
-        "skill3_desc": "Khả năng đọc hiểu tài liệu chuyên ngành tốt và quản lý mã nguồn linh hoạt.",
-        "skill_eng": "Đọc hiểu Tiếng Anh",
+        "skill3_title": "Kiểm Thử & Công Cụ",
+        "skill3_desc": "Quy trình kiểm thử chất lượng, quản lý mã nguồn linh hoạt và cộng tác dự án hiệu quả.",
+        "skill_eng": "Tiếng Anh chuyên ngành",
 
         // Timeline Section (Học Vấn & Kinh Nghiệm)
         "timeline_badge": '<i class="bi bi-journal-bookmark-fill me-1"></i> Học Vấn & Kinh Nghiệm',
@@ -38,17 +38,18 @@ const translations = {
         "timeline1_school": "Trường Đại học Ngoại Ngữ Tin học TPHCM (HUFLIT)",
         "timeline1_major": 'Chuyên ngành: <strong>Công Nghệ Phần Mềm</strong>',
         "timeline1_status": '<i class="bi bi-mortarboard-fill me-1"></i> Đang theo học',
-        "timeline2_year": "2026 - đến nay",
-        "timeline2_title": "Công ty Cổ phần Công nghệ BrightStar | Thực tập sinh thiết kế Website",
+        "timeline2_year": "07.2026 - 10.2026",
+        "timeline2_title": "Công ty Cổ phần Công nghệ BrightStar",
+        "timeline2_role": "Thực tập sinh - PHP / Laravel",
         "timeline2_desc": `
     <ul>
-        <li>Tham gia thiết kế, xây dựng và tối ưu giao diện người dùng (UI/UX) cho các dự án web của công ty.</li>
-        <li>Phối hợp với đội ngũ backend để tích hợp API, đảm bảo tính mượt mà và tương thích trên nhiều thiết bị (Responsive Design).</li>
-        <li>Nâng cao tư duy lập trình web, áp dụng các tiêu chuẩn Clean Code và cải thiện tốc độ tải trang.</li>
+        <li>Phát triển và bảo trì các module website sử dụng PHP và Laravel framework.</li>
+        <li>Phối hợp thiết kế, tối ưu giao diện người dùng (UI/UX) và tích hợp API mượt mà.</li>
+        <li>Áp dụng các tiêu chuẩn Clean Code và cải thiện tốc độ tải trang.</li>
     </ul>
 `,
         "timeline2_badge": '<i class="bi bi-check-circle-fill me-1"></i> Thực chiến',
-        "timeline2_tag": "Thực tập",
+        "timeline2_tag": "PHP / Laravel",
 
         // Projects Section
         "projects_main_title": "Projects",
@@ -69,7 +70,7 @@ const translations = {
                             <p class="mb-0">• Tính lương nhân viên tự động dựa trên bảng công tháng và xuất vé điện tử kèm mã QR Code.</p>`,
         "proj1_role": "Vai trò: Backend & AI Integration Lead",
 
-        "proj2_title": "MEILING COSMETICS – E-commerce & AI Skincare Platform",
+        "proj2_title": "MEILING COSMETICS – Nền Tảng TMĐT & Chăm Sóc Da AI",
         "proj2_desc": "Website thương mại điện tử mỹ phẩm cao cấp kết hợp AI Skincare Assistant và hệ thống đặt lịch soi da 3D & tư vấn bác sĩ da liễu.",
         "proj2_acc1_head": '<i class="bi bi-bag-check text-warning me-2 fs-5"></i> Thương Mại Điện Tử, Thanh Toán & Vận Chuyển',
         "proj2_acc1_body": `<p class="mb-2">• Xây dựng quy trình e-commerce toàn diện: Sản phẩm, giỏ hàng, wishlist, voucher giảm giá, đánh giá và đặt hàng hoàn chỉnh.</p>
@@ -83,7 +84,7 @@ const translations = {
         "proj2_acc3_body": `<p class="mb-2">• Đặt lịch dịch vụ: Xây dựng quy trình đặt lịch soi da 3D VISIA và hẹn tư vấn bác sĩ da liễu cho khách hàng.</p>
                             <p class="mb-2">• Quản lý lịch hẹn đồng bộ: Giúp khách hàng và Admin theo dõi, điều phối và cập nhật trạng thái lịch hẹn suôn sẻ.</p>
                             <p class="mb-0">• Admin Dashboard toàn diện: Quản lý sản phẩm, đơn hàng, tồn kho, mã giảm giá, bài viết blog và lịch hẹn.</p>`,
-        "proj2_role": "Vai trò: Fullstack & AI Integration Lead",
+        "proj2_role": "Vai trò: Backend & Integration Developer",
 
         // Activities Section (Hoạt Động & Sự Kiện)
         "activities_badge": '<i class="bi bi-people-fill me-1"></i> Hoạt Động & Ngoại Khóa',
@@ -124,6 +125,21 @@ const translations = {
         "contact_btn": "GỬI TIN NHẮN TỰ ĐỘNG",
         "contact_secure": "Thông tin của bạn được bảo mật tuyệt đối",
 
+        // CV Preview Modal & Download Confirmation
+        "cv_modal_title": "Xem trước CV - Băng Thanh",
+        "cv_modal_subtitle": "Tài liệu: BANGTHANH.pdf",
+        "cv_modal_open_tab": '<i class="bi bi-box-arrow-up-right me-1"></i> Mở tab mới',
+        "cv_modal_close": "Đóng",
+        "cv_modal_download_btn": '<i class="bi bi-download me-1"></i> Tải CV',
+        "cv_confirm_title": "Xác nhận tải CV",
+        "cv_confirm_question": "Bạn có muốn tải CV này không?",
+        "cv_confirm_cancel": "Không",
+        "cv_confirm_accept": '<i class="bi bi-download me-1"></i> Đồng ý tải',
+        "cv_downloading_msg": "Đang bắt đầu tải xuống CV BANGTHANH.pdf...",
+        "cv_modal_meta_update": '<i class="bi bi-check2-circle text-success me-1"></i> Bản cập nhật mới nhất',
+        "cv_modal_meta_format": '<i class="bi bi-filetype-pdf text-danger me-1"></i> Định dạng PDF',
+        "hero_cv_btn": '<i class="bi bi-file-earmark-pdf-fill me-1"></i> Xem & Tải CV',
+
         // Footer & Scroll Button
         "scroll_top_title": "Cuộn lên đầu trang"
     },
@@ -146,13 +162,13 @@ const translations = {
         // Skills Section
         "skills_title": "Core Skills",
         "skills_subtitle": "Toolkit & technologies I use to build optimized web systems",
-        "skill1_title": "Backend & Server",
-        "skill1_desc": "Strong architectural logic mindset, applying MVC patterns for secure data flow and API integration.",
+        "skill1_title": "Backend & Database",
+        "skill1_desc": "Strong architectural logic mindset, building robust backend architectures and secure database management.",
         "skill2_title": "Frontend (UI)",
         "skill2_desc": "Creating responsive, sleek, user-friendly interfaces with intuitive user experiences.",
-        "skill3_title": "Tools & Others",
-        "skill3_desc": "Proficient technical document reading ability and flexible version control management.",
-        "skill_eng": "Technical English Reading",
+        "skill3_title": "Testing & Tools",
+        "skill3_desc": "Quality testing workflow, flexible version control management, and effective project collaboration.",
+        "skill_eng": "Technical English",
 
         // Timeline Section
         "timeline_badge": '<i class="bi bi-journal-bookmark-fill me-1"></i> Education & Experience',
@@ -162,17 +178,18 @@ const translations = {
         "timeline1_school": "HUFLIT University (Ho Chi Minh City)",
         "timeline1_major": 'Major: <strong>Software Engineering</strong>',
         "timeline1_status": '<i class="bi bi-mortarboard-fill me-1"></i> Currently Studying',
-        "timeline2_year": "2026 - Present",
-        "timeline2_title": "BrightStar Technology JSC | Website Design Intern",
+        "timeline2_year": "07.2026 - 10.2026",
+        "timeline2_title": "BrightStar Technology JSC",
+        "timeline2_role": "PHP / Laravel Intern",
         "timeline2_desc": `
     <ul>
-        <li>Participated in designing, developing, and optimizing user interfaces (UI/UX) for the company's web projects.</li>
-        <li>Collaborated with the backend team to integrate APIs, ensuring smooth performance and cross-device compatibility through Responsive Design.</li>
-        <li>Improved web development skills by applying Clean Code principles and optimizing page loading performance.</li>
+        <li>Developed and maintained website modules using PHP and Laravel framework.</li>
+        <li>Collaborated on UI/UX optimization and seamless API integration.</li>
+        <li>Applied Clean Code standards and improved page loading performance.</li>
     </ul>
 `,
         "timeline2_badge": '<i class="bi bi-check-circle-fill me-1"></i> Hands-on Experience',
-        "timeline2_tag": "Internship",
+        "timeline2_tag": "PHP / Laravel",
 
         // Projects Section
         "projects_main_title": "Projects",
@@ -207,7 +224,7 @@ const translations = {
         "proj2_acc3_body": `<p class="mb-2">• Service Booking Flow: Appointment scheduling system for 3D VISIA skin analysis and dermatologist consultations.</p>
                             <p class="mb-2">• Seamless Booking Management: Enables clients to track and Admins to manage and update appointment statuses easily.</p>
                             <p class="mb-0">• Comprehensive Admin Dashboard: Complete management of products, orders, inventory, vouchers, blogs, and appointments.</p>`,
-        "proj2_role": "Role: Fullstack & AI Integration Lead",
+        "proj2_role": "Role: Backend & Integration Developer",
 
         // Activities Section
         "activities_badge": '<i class="bi bi-people-fill me-1"></i> Activities & Events',
@@ -247,6 +264,21 @@ const translations = {
         "form_message": "Your Message Content...",
         "contact_btn": "SEND AUTOMATIC MESSAGE",
         "contact_secure": "Your information is 100% secure",
+
+        // CV Preview Modal & Download Confirmation
+        "cv_modal_title": "CV Preview - Bang Thanh",
+        "cv_modal_subtitle": "Document: BANGTHANH.pdf",
+        "cv_modal_open_tab": '<i class="bi bi-box-arrow-up-right me-1"></i> Open in new tab',
+        "cv_modal_close": "Close",
+        "cv_modal_download_btn": '<i class="bi bi-download me-1"></i> Download CV',
+        "cv_confirm_title": "Confirm CV Download",
+        "cv_confirm_question": "Do you want to download this CV?",
+        "cv_confirm_cancel": "Cancel",
+        "cv_confirm_accept": '<i class="bi bi-download me-1"></i> Download Now',
+        "cv_downloading_msg": "Starting download for BANGTHANH.pdf...",
+        "cv_modal_meta_update": '<i class="bi bi-check2-circle text-success me-1"></i> Latest Version',
+        "cv_modal_meta_format": '<i class="bi bi-filetype-pdf text-danger me-1"></i> PDF Format',
+        "hero_cv_btn": '<i class="bi bi-file-earmark-pdf-fill me-1"></i> View & Download CV',
 
         // Footer & Scroll Button
         "scroll_top_title": "Scroll to top"
